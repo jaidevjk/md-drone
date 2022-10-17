@@ -70,13 +70,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // for connecing frontend in heroku
-app.use('/static',express.static(path.join(__dirname, './client/public')));
+app.use(express.static(path.join(__dirname, 'client','public')));
 
-app.get('/', function (req, res) {
+app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, './client/public', 'index.html'));
 });
 
-app.use('/', indexRouter);
+//app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/jwt',jwtRuter);
 app.use('/gallery',galleryRuter);
