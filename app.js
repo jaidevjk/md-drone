@@ -37,7 +37,6 @@ app.use(cors(corsOptions));
 
 // Set EJS as templating engine 
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, '../client/public')));
 
 
 let mongoConnUrl = "mongodb+srv://jaidevk:4AL15ME715@cluster0.kmhzh.mongodb.net/?retryWrites=true&w=majority";
@@ -70,11 +69,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// for connecing frontend in heroku
+app.use(express.static(path.join(__dirname, '../client/public')));
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
-app.use('/', indexRouter);
+//app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/jwt',jwtRuter);
 app.use('/gallery',galleryRuter);
