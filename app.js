@@ -37,6 +37,7 @@ app.use(cors(corsOptions));
 
 // Set EJS as templating engine 
 app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, '../client/public')));
 
 
 let mongoConnUrl = "mongodb+srv://jaidevk:4AL15ME715@cluster0.kmhzh.mongodb.net/?retryWrites=true&w=majority";
@@ -69,6 +70,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
