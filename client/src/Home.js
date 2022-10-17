@@ -115,12 +115,12 @@ const [spraysererr,setSprayserErr] =useState([]);
 
 
   return (
-<div className="App" style={{margin:"0px"}}>                           
+<div className="" style={{margin:"0px"}}>                           
  <div style={{marginTop:"0px"}}><ResponsiveAppBar /> </div>                       
   <div className="col-12" style={{padding:"10px"}} >
       <div style={{}}>
    
-<video controls autoPlay loop muted width="100%">
+<video  autoPlay loop muted width="100%">
           <source src="landing-video.mp4" type="video/mp4"></source>
         </video>
         </div>
@@ -134,8 +134,8 @@ const [spraysererr,setSprayserErr] =useState([]);
             <li className="item" rel="tab1">
               <div className="block-icon">
                 <img src="img/icon-tab-2.svg" alt="img" />
-                <h4>3+</h4>
-                <h6>Branches</h6>
+                <h4>3+</h4><h6>Branches</h6>
+                <div className="info-span" style={{color:"white"}}><span style={{display:"inline"}}><h4 style={{display:"inline"}}>3+</h4></span> <span style={{display:"inline"}}><h6 style={{display:"inline"}}>BRANCHES</h6></span></div>
               </div>
             </li>
             <li className="item" rel="tab2">
@@ -143,6 +143,8 @@ const [spraysererr,setSprayserErr] =useState([]);
                 <img src="img/icon-tab-111.svg" alt="img" />
                 <h4>5+</h4>
                 <h6>Drone Variants</h6>
+                <div className="info-span" style={{color:"white"}}><span style={{display:"inline"}}><h4 style={{display:"inline"}}>5+</h4></span> <span style={{display:"inline"}}><h6 style={{display:"inline"}}>Drone Variants</h6></span></div>
+
               </div>
             </li>
             <li className="item" rel="tab3">
@@ -150,6 +152,8 @@ const [spraysererr,setSprayserErr] =useState([]);
                 <img src="img/icon-tab-6t.svg" alt="img" />
                 <h4>30+</h4>
                 <h6>Pilots</h6>
+                <div className="info-span" style={{color:"white"}}><span style={{display:"inline"}}><h4 style={{display:"inline"}}>30+</h4></span> <span style={{display:"inline"}}><h6 style={{display:"inline"}}>Pilot</h6></span></div>
+
               </div>
             </li>
             <li className="item" rel="tab4">
@@ -157,6 +161,8 @@ const [spraysererr,setSprayserErr] =useState([]);
                 <img src="img/icon-tab-3.svg" alt="img" />
                 <h4>5+</h4>
                 <h6>Technicians</h6>
+                <div className="info-span" style={{color:"white"}}><span style={{display:"inline"}}><h4 style={{display:"inline"}}>5+</h4></span> <span style={{display:"inline"}}><h6 style={{display:"inline"}}>Technicians</h6></span></div>
+
               </div>
             </li>
             <li className="item" rel="tab5">
@@ -164,6 +170,8 @@ const [spraysererr,setSprayserErr] =useState([]);
                 <img src="img/icon-tab-4.svg" alt="img" />
                 <h4>5000+</h4>
                 <h6>acres sprayed</h6>
+                <div className="info-span" style={{color:"white"}}><span style={{display:"inline"}}><h4 style={{display:"inline"}}>5000+</h4></span> <span style={{display:"inline"}}><h6 style={{display:"inline"}}>acres</h6></span></div>
+
               </div>
             </li>
             <li className="item" rel="tab6">
@@ -171,26 +179,27 @@ const [spraysererr,setSprayserErr] =useState([]);
                 <img src="img/icon-tab-6.svg" alt="img" />
                 <h4>2500+</h4>
                 <h6>farmers</h6>
+                <div className="info-span" style={{color:"white"}}><span style={{display:"inline"}}><h4 style={{display:"inline"}}>2500+</h4></span> <span style={{display:"inline"}}><h6 style={{display:"inline"}}>farmers</h6></span></div>
+                
               </div>
             </li>
           </ul>
 </div>
     </div> 
     </section>
-<br />
-<br />
+    <br />
     <section className="spray-drone" style={{padding:"10px"}}>
 
       <div className="box" style={{padding:"0px"}}>
         <div className="row align-items-center" style={{paddingTop:"0px",margin:"0px"}}>
           <div className="price-img-block col-md-6 col-sm-0" style={{padding:"0px",marginTop:"0px",height:"inherit"}}>
-            <div className="price-img-cover" style={{padding:"10px"}}>
-              <img className="lazy" src="img/best-img.jpg"  alt="img" height="500px" />
+            <div className="price-img-cover" style={{padding:"0px"}}>
+              <img className="lazy" src="img/best-img.jpg"  alt="img" height="555px" width="inherit" />
               <img className="price-drone " src="img/drone-1.png"  alt="img" style={{padding:"0px",margin:"0px"}}/>
             </div>
           </div>
-          <div className=" col-md-6 " style={{textAlign: "left",padding:"1px"}}>
-            <div className="price-info" style={{textAlign: "left",padding:"5px"}} >
+          <div className=" col-md-6 " style={{textAlign: "left",padding:"4px"}}>
+            <div className="price-info" style={{textAlign: "justify",padding:"5px"}} >
               <h1 style={{color:"#1da912"}} className="title-left">For Spray Services</h1>
               <p style={{color:"#fff"}}>Finding a problem to find skilled Labour?
                 <br />
@@ -201,14 +210,14 @@ const [spraysererr,setSprayserErr] =useState([]);
                 Don't worry!
                 Multiplex Drone Pvt Ltd is eager to make farmers happy.
               </p>
-              <br />
+             
             <button className="quiry-btn" onClick={() => setShowspray(true)}>book now</button>
             </div>
-            <br />
+           
             <div className="price-info" style={{textAlign: "justify",padding:"5px"}}>
               <h1 style={{color:"#1da912"}} className="title-left">For Customized Drones</h1>
               <p style={{color:"#fff"}}>Every drone is manufactured with carbon fibers and aerospace-grade materials with high precision and controlled with industrial-grade flight controllers. Enquire now for customized/agricultural drones.</p>
-              <br />
+             
             <button className="quiry-btn" onClick={() => setShow(true)}>enquire</button>
             </div>
           </div>

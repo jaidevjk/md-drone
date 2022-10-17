@@ -12,7 +12,7 @@ import './style.css';
 function Footer() {
   
   return (
-<div className="App">                          
+<div className="">                          
 
           
         <footer>

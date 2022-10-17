@@ -1007,9 +1007,9 @@ header.header-scroll .logo-strong {
 }
 .price-img-cover .price-drone {
   position: absolute;
-  width:70%;
+  width:60%;
   z-index: 1;
-  top: 12%;
+  top: 15%;
   /* right: 10px; */
   left:15%;
   max-width: none;
@@ -2498,7 +2498,9 @@ h4{
 .s-infographics h2 {
   margin-bottom: 30px;
 }
-
+.info-span{
+  display:none
+}
 /*-------------------------- S-TEAM --------------------------*/
 .row{
   display: flex;
@@ -4958,8 +4960,13 @@ blockquote:before {
   .prod-tabs {
     margin: 0 0 30px;
   }
-  .prod-tabs .block-icon img {
+  .prod-tabs .block-icon img,.prod-tabs .block-icon h4,.prod-tabs .block-icon h6 {
     display: none;
+
+  }
+  .info-span{
+    display:inline;
+    padding: 25px;
   }
   .s-shop .block-icon:before,
   .prod-tabs .block-icon h6:before {
