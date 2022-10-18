@@ -70,7 +70,7 @@ const sendEnquiryDetails=async(e)=>{
         <section className="techspecs">
           <div className="container" style={{textAlign:"center"}}>
             <div className="overviewinfo" style={{textAlign:"center"}}>
-              <p style={{color:"#fff",textAlign:"justify-all"}}>Finding a problem to find skilled Labour?
+              <p style={{color:"#fff",textAlign:"justify"}}>Finding a problem to find skilled Labour?
                 <br />
                 Difficult to manage the pest control?
                 <br />
@@ -78,24 +78,24 @@ const sendEnquiryDetails=async(e)=>{
               </p>
             </div>
             <div className="overviewtitle" style={{textAlign:"center"}}>
-              <p style={{color:"#fff",textAlign:"justify-all"}}>Don't worry!
+              <p style={{color:"#fff",textAlign:"justify"}}>Don't worry!
                 Multiplex Drone Pvt Ltd is eager to make farmers happy</p>
             </div>
           </div>
         </section>
 
-        <div className="container" style={{width:"max-content"}}>
-          <div className="servicestitle" style={{width:"max-content"}}>
-            <p className="" style={{color:"#1da912",textAlign:"center",width:"max-content"}}>1. Fill out the form or call to +91-9591999044</p>
+        <div className="container" style={{width:"100%"}}>
+          <div className="servicestitle" style={{width:"100%"}}>
+            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>1. Fill out the form or call to +91-9591999044</p>
           </div>
           <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"max-content"}}>2. Our experienced team will reach the location</p>
+            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>2. Our experienced team will reach the location</p>
           </div>
           <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"max-content"}}>3. Site Inspection and our team complete the work</p>
+            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>3. Site Inspection and our team complete the work</p>
           </div>
           <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"max-content"}}>4. Smiles on the farmer face</p>
+            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>4. Smiles on the farmer face</p>
             <br /><br />
           </div>
             <button className="quiry-btn" onClick={() => setShow(true)}>enquire now</button>

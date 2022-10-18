@@ -24,9 +24,6 @@ import { useNavigate } from 'react-router-dom';
  
 
   const style = {
-    
-  border:"solid red 2px",
-
 };
     
 

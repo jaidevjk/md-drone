@@ -4966,7 +4966,7 @@ blockquote:before {
   }
   .info-span{
     display:inline;
-    padding: 25px;
+    /* padding: 10px; */
   }
   .s-shop .block-icon:before,
   .prod-tabs .block-icon h6:before {
