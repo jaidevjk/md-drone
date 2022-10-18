@@ -69,13 +69,14 @@ const sendEnquiryDetails=async(e)=>{
       <div className="container">
         <section className="techspecs">
           <div className="container" style={{textAlign:"center"}}>
-            <div className="overviewinfo" style={{textAlign:"center"}}>
-              <p style={{color:"#fff",textAlign:"justify"}}>Finding a problem to find skilled Labour?
+            <div className="overviewinfo" style={{textAlign:"",display:"flex",flexWrap:"wrap",alignItems:"center"}}>
+            <div style={{textAlign:"center",minWidth:"auto",margin:"auto"}}><p style={{color:"#fff",textAlign:"justify",}}>Finding a problem to find skilled Labour?
                 <br />
                 Difficult to manage the pest control?
                 <br />
                 Difficult to give spray at correct time?
-              </p>
+              </p></div>
+              
             </div>
             <div className="overviewtitle" style={{textAlign:"center"}}>
               <p style={{color:"#fff",textAlign:"justify"}}>Don't worry!

@@ -32,17 +32,19 @@ function Footer() {
           </p>
         </div>
         <div className="col-6 col-sm-4 col-lg-2 blok-link">
-          <h5>Pages</h5>
+          
           <ul>
-            <li><a href="/">Home</a></li>
+          <h5>Pages</h5>
+            <li ><a href="/">Home</a></li>
             <li><a href="/about">About us</a></li>
             <li><a href="/products">Products</a></li>
             <li><a href="/services">Services</a></li>
           </ul>
         </div>
         <div className="col-6 col-sm-4 col-lg-2 blok-link">
-          <h5>info</h5>
+          
           <ul>
+          <h5>info</h5>
             <li><a href="#">Training</a></li>
             <li><a href="/gallery">Gallery</a></li>
             <li><a href="#">News & Events</a></li>
@@ -50,8 +52,9 @@ function Footer() {
           </ul>
         </div>
         <div className="col-12 col-sm-4 col-lg-2 blok-link">
-          <h5>support</h5>
+          
           <ul>
+          <h5>support</h5>
             <li><a href="#">Terms & Conditions</a></li>
             <li><a href="#">Refund Policy</a></li>
             <li><a href="#">Shipping Policy</a></li>

@@ -1313,8 +1313,10 @@ header.header-scroll .logo-strong {
   padding: 20px;
   position: relative;
   transition: 0.3s ease;
+  padding: 5px;
+ 
 }
-.clients{
+.clients{ 
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -4851,6 +4853,11 @@ blockquote:before {
 }
 
 @media (max-width: 575px) {
+  .sprayed{
+    /* border:solid red 2px; */
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
   .s-banners {
     padding-bottom: 70px;
   }
@@ -4964,9 +4971,11 @@ blockquote:before {
     display: none;
 
   }
-  .info-span{
+  .info-span,.info-span h6{
     display:inline;
     /* padding: 10px; */
+    font-weight: 30;
+    text-transform: capitalize;
   }
   .s-shop .block-icon:before,
   .prod-tabs .block-icon h6:before {
@@ -4982,8 +4991,8 @@ blockquote:before {
     align-items: center;
   }
   .prod-tabs .item {
-    width: 100%;
-    padding: 0;
+    width: 90%;
+    padding: 3px;
   }
   .prod-tabs .item.active {
     pointer-events: none;
