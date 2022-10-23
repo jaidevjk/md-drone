@@ -50,8 +50,8 @@ const sendEnquiryDetails=async(e)=>{
                 })
                 .catch((error) => {
                   //console.log("err",error.response.data.replace("enquiries validation failed:", "").split(",",20));
-                  console.log(error.response)
-                  setErr(error.response.data.replace("enquiries validation failed:", "").split(",",20))
+                  //console.log(error.response)
+                  // setErr(error.response.data.replace("enquiries validation failed:", "").split(",",20))
                  })
                 .finally(()=>{
                   
@@ -70,7 +70,8 @@ const sendEnquiryDetails=async(e)=>{
         <section className="techspecs">
           <div className="container" style={{textAlign:"center"}}>
             <div className="overviewinfo" style={{textAlign:"",display:"flex",flexWrap:"wrap",alignItems:"center"}}>
-            <div style={{textAlign:"center",minWidth:"auto",margin:"auto"}}><p style={{color:"#fff",textAlign:"justify",}}>Finding a problem to find skilled Labour?
+            <div style={{textAlign:"center",minWidth:"auto",margin:"auto"}}><p style={{color:"#fff",textAlign:"justify",}}>
+                Finding a problem to find skilled Labour?
                 <br />
                 Difficult to manage the pest control?
                 <br />
@@ -78,37 +79,33 @@ const sendEnquiryDetails=async(e)=>{
               </p></div>
               
             </div>
-            <div className="overviewtitle" style={{textAlign:"center"}}>
+            <div className="overviewtitle" style={{textAlign:"",display:"flex",flexWrap:"wrap",alignItems:"center"}}>
+             <div style={{textAlign:"center",minWidth:"auto",margin:"auto"}}>
               <p style={{color:"#fff",textAlign:"justify"}}>Don't worry!
                 Multiplex Drone Pvt Ltd is eager to make farmers happy</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <div className="container" style={{width:"100%"}}>
-          <div className="servicestitle" style={{width:"100%"}}>
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>1. Fill out the form or call to +91-9591999044</p>
+        <div className="container" style={{width:"100%", textAlign: "center",display:"flex",flexWrap:"wrap",alignItems:"center"}}>
+          <div className="servicestitle" style={{textAlign:"center",minWidth:"auto",margin:"auto"}}>
+            <p className="" style={{color:"#fff",textAlign:"justify",}}>1. Fill out the form or call to +91-9591999044<br /><br />
+            2. Our experienced team will reach the location<br/><br />
+            3. Site Inspection and our team complete the work<br/><br />
+            4. Smiles on the farmer face
+            </p><br/><br />
+            <button className="quiry-btn" onClick={() => setShow(true)}>enquire now</button>            
           </div>
-          <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>2. Our experienced team will reach the location</p>
-          </div>
-          <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>3. Site Inspection and our team complete the work</p>
-          </div>
-          <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>4. Smiles on the farmer face</p>
-            <br /><br />
-          </div>
-            <button className="quiry-btn" onClick={() => setShow(true)}>enquire now</button>
+            
         </div>
-
+        
       </div>
 </section><br />
 
 <section className="s-we-offer" style={{margin:"0px",paddingTop:"0px",paddingBottom:"0px",marginBottom:"0px"}}>
       <div className="container">
         <h2>Services we offer</h2>
-        <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
         <div className="row we-offer-cover">
           <div className="col-12 col-sm-6 we-offer-item">
             <div className="offer-item-img">
@@ -125,7 +122,7 @@ const sendEnquiryDetails=async(e)=>{
               <img src="img/img-serv-2.jpg" alt="img" />
             </div>
             <div className="offer-item-content" style={{textAlign:"justify"}}>
-              <h4 className="title-line-left">agricultural drones</h4>
+              <h4 className="title-line-left">crop health monitoring</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a> ut aliquip ex ea
                 commodo consequat.</p>
             </div>
@@ -137,7 +134,6 @@ const sendEnquiryDetails=async(e)=>{
 <section className="new-product" style={{paddingTop:"0px",marginTop:"0px"}}>
       <div className="container" style={{paddingTop:"0px",marginTop:"0px"}}>
         <h2 style={{paddingTop:"0px",marginTop:"0px"}}>testimonials</h2>
-        <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
         <Services_Carousel />
       </div>
     </section>
@@ -153,6 +149,7 @@ const sendEnquiryDetails=async(e)=>{
 
 <Modal
       show={show} onHide={handleClose}
+      style={{paddingTop:'5px'}}
     > 
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -167,7 +164,7 @@ const sendEnquiryDetails=async(e)=>{
             <label>Full Name</label>
             <input  type="text" name="yourname" placeholder="Name" style={{color:"black",padding:"5px"}} required/>         
             <lable>Contact Number</lable><br/>
-            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} required/>
+            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} pattern="[0-9]{10}" required/>
             <lable>Email</lable><br/>
             <input  type="email" name="youremail" placeholder="Email" style={{color:"black",padding:"5px"}} required />
             <lable>Place</lable><br/>
@@ -175,9 +172,7 @@ const sendEnquiryDetails=async(e)=>{
               
             <lable>Description</lable>
             <textarea  name="yourtext" placeholder="Message" style={{color:"black",padding:"5px"}} required></textarea>
-{err.map((val)=>{ return(<div style={{color:"red",padding:"5px"}}>{val}</div>)
-                          
-                         })}
+
 
             <button className="btn"  style={{marginTop:"10px",background:"#1da912",color:"#fff"}}>SUBMIT</button>
         </form>

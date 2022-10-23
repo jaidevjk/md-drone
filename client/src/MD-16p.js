@@ -9,17 +9,68 @@ import './slick.min.css';
 import './style.css';
 import ResponsiveAppBar from './AppBar'; 
 import Footer from './Footer';
-
+import axios from 'axios';
+import 'react-toastify/dist/ReactToastify.css'; // import first
+import { ToastContainer, toast } from 'react-toastify'; // then this
+import { useNavigate } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 function MD16p() {
-  
+const [err,setErr] =useState([]);
+  const [show, setShow] = useState(false);
+  const handleClose = () => {setShow(false);setErr([])};
+  const handleShow = () => setShow(true);
+
+      const navigate = useNavigate();
+
+const sendEnquiryDetails=async(e)=>{
+          e.preventDefault();
+          let objectOb = {
+            name: e.target.yourname.value,
+            contactnumber: e.target.yourphone.value,
+            email: e.target.youremail.value,
+            message: e.target.yourtext.value,
+
+          }
+          // console.log(objectOb);
+          await axios
+                .post('http://localhost:4003/contactusenquiry', objectOb)
+                .then((response) => {
+                  //navigate(`/`);
+                  //alert("Successfully")
+                  toast.success("Successfully Enquiry Submitted.",{position: "top-center"});
+                      //console.log(objectOb)
+
+                    e.target.yourname.value="";
+                    e.target.yourphone.value='';
+                    e.target.youremail.value="";
+                    e.target.yourtext.value='';
+
+                })
+                .catch((error) => {
+                  //console.log("err",error.response.data.replace("enquiries validation failed:", "").split(",",20));
+                  //console.log(error.response);
+                  //setErr(error.response.data.replace("contact validation failed:","").split(",",50));
+                  const Err = error.response.data.replace("contact validation failed:","").replace("contactnumber","Contact Number");
+                         //console.log(Err)
+                  toast.error(Err,{position: "top-center",});
+
+                 })
+                .finally(()=>{
+                  
+                })
+
+
+          }
+
   
   return (
 <div>                           
  <div style={{marginTop:"0px"}}><ResponsiveAppBar /> </div>                       
   <section className="" style={{margin:"0px",padding:"0px auto"}}>
       <div className="container" style={{marginTop:"0px",padding:"0px auto"}}>
-        <h2>MD 16q</h2>
+        <h2>MD 16p</h2>
         <div className="productinfo">
           <p style={{color: "#1da912", align: "center"}}>35 Minute Endurance | 1 Kilometere Range | 49 Kg MTOW</p>
         </div>
@@ -178,7 +229,7 @@ function MD16p() {
     <section className="s-discount-program mask" style={{backgroundImage: "url(img/bg-4.jpg)"}}>
       <div className="container">
         <h2 style={{color: "#fff"}}>know more about MD 16p</h2>
-        <a href="md-5q.html" className="btn" style={{background:"#565656",color:"#fff"}}>Download Catalog</a>
+        <a href="#" className="btn" style={{background:"#565656",color:"#fff"}} onClick={() => setShow(true)}>Download Catalog</a>
       </div>
     </section>
   
@@ -186,7 +237,7 @@ function MD16p() {
     <section className="best-prices">
       <div className="container s-anim">
         <h2>related proucts</h2>
-        <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        {/* <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
 
          <section className="serv-block" style={{margin:"20px",width:"90%"}}> 
         
@@ -234,35 +285,60 @@ function MD16p() {
 <section className="s-contacts s-main-contacts" >
       <div className="container s-anim">
         <h2>Contact us</h2>
-        <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-        <form id='contactform' action="php/contact.php" name="contactform" >
+        <form id='contactform' name="contactform" onSubmit={sendEnquiryDetails}>
           <ul className="form-cover" style={{padding:"0px"}}>
-            <li className="inp-name"><input id="name" type="text" name="your-name" placeholder="Name" /></li>
-            <li className="inp-phone"><input id="phone" type="tel" name="your-phone" placeholder="Phone" /></li>
-            <li className="inp-email"><input id="email" type="email" name="your-email" placeholder="E-mail" /></li>
-            <li className="inp-text"><textarea id="comments" name="your-text" placeholder="Message"></textarea></li>
+            <li className="inp-name"><input  type="text" name="yourname" placeholder="Name" style={{color:"black"}} required/></li>
+            <li className="inp-phone"><input  type="tel" name="yourphone" placeholder="Phone"  style={{color:"black"}} pattern="[0-9]{10}"  required/></li>
+            <li className="inp-email"> <input type="email" name="youremail" placeholder="Email" style={{color:"black"}}required /></li>
+            <li className="inp-text"><textarea  name="yourtext" placeholder="Message" style={{color:"black"}} required></textarea></li>
           </ul>
           <div className="checkbox-wrap">
             <div className="checkbox-cover">
-              <input type="checkbox" />
+              <input type="checkbox" required/>
               <p style={{color: "#000"}}>By using this form you agree with the storage and handling of your data by this website.</p>
             </div>
           </div>
           <div className="btn-form-cover">
-            <button className="btn" style={{background:"#565656",color:"#fff"}}>SUBMIT</button>
+            <button className="quiry-btn">Submit</button>
           </div>
         </form>
         <div id="message"></div>
       </div>
     </section>
-
-
 <section >
         <Footer />  
         </section>
 
+<Modal
+      show={show} onHide={handleClose}
+      style={{paddingTop:'5px',maxWidth:"300px",position: "absolute",
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)",}}
+    > 
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+         Enter  Details
+        </Modal.Title>
+      </Modal.Header>
 
-
+      <Modal.Body>
+        
+        
+          <form  className=""  name="contactform" >
+            <label>Full Name</label>
+            <input  type="text" name="yourname" placeholder="Name" style={{color:"black",padding:"5px"}} required/>         
+            <lable>Contact Number</lable><br/>
+            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} pattern="[0-9]{10}" required/>
+            <lable>Email</lable><br/>
+            <input  type="email" name="youremail" placeholder="Email" style={{color:"black",padding:"5px"}} required />
+            <button className="btn"  style={{marginTop:"10px",background:"#1da912",color:"#fff"}}>SUBMIT</button>
+        </form>
+                         
+      </Modal.Body>
+         
+    </Modal>
+ <ToastContainer />
 
 
 </div>

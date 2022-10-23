@@ -14,10 +14,90 @@ background-color: #efefef;
   text-decoration: none;
   color:#7d7d7d;
 }
+/*.video-box{
+ background-image: "../public/img/MFHM.png";
+ background-size: cover;
+}*/
+
+.header-icon > .link-head  > a {
+  font-size: 14px;
+  text-decoration: none;
+  padding: 0;
+  display: block;
+}
+.header-icon .link-head  a {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 19px;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.header-icon .link-head  a i {
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+}
+.header-icon > .link-head  > a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+.header-icon > .link-head .active > a:before {
+  width: 100%;
+}
+.header-icon .link-head  a:hover {
+  color: #1da912;
+}
+.header-icon > .link-head  > a:hover:before {
+  background-color: #1da912;
+  width: 100%;
+}
+span .link-head{
+  list-style: none;
+  padding-left: inherit;
+  padding-right: inherit;
+}
+
+/*.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}*/
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s .linear;
   }
 }
 

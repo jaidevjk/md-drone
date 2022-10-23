@@ -26,14 +26,21 @@ import './style.css';
 import { Link as RouterLink } from "react-router-dom";
 import {makeStyles} from "@material-ui/styles";
 import { ClassNames } from '@emotion/react';
+import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
+
 
 const useStyles = makeStyles(theme => ({
+  style:{backgroundColor:"#262c30",border:"solid red 2px",minWidth:"70px",width:"100%",padding:"0px",paddingRight:"20px",margin:"0px",textAlign:"center"},
+  toggleColor:{color:"#fff"},
+  container:{backgroundColor:"cyan",border:"solid red 2px",width:"100%",margin:"0px",marginRight:"0px"}
 
 }));
 
 const ResponsiveAppBar = () => {
    const classes = useStyles();
- 
+   const [modalShow, setModalShow] = React.useState(false);
+
     const [open, setOpen] = useState(false);
 
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -60,7 +67,7 @@ const ResponsiveAppBar = () => {
        <AppBar position="static" sx={{backgroundColor:"#262c30",minHeight:"70px",maxHeight:"70px",p:0}}>
       <Container maxWidth="xl" sx={{height:"inherit"}}>
         <Toolbar disableGutters>
-        <Box sx={{ flexGrow: 0,}}>
+        <Box sx={{ flexGrow: 0,}} style={{float:"left",paddingRight:"0%"}}>
                                 <a href="/" className="logo"><img src="img/mainlogo.png" alt="logo" /></a>
                               
             
@@ -74,24 +81,29 @@ const ResponsiveAppBar = () => {
               anchorEl={anchorElNav}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
               sx={{
                 display: { xs: 'block', md: 'none', },
                 padding:"0px",
-    
               }}
               PaperProps={{
               style: {
-                position:"static",
+               position:"static",
                 top:"auto",
                 zIndex: 1,
-                marginLeft:"-0px", 
+                marginRight:"0%", 
                 marginTop:"69px",
-                // width:"max-content",
-                float:"left",       
+                float:"right",       
                 backgroundColor:"#262c30",
                 borderRadius:"0px",
-
-                
               }
             }}
             >
@@ -100,83 +112,71 @@ const ResponsiveAppBar = () => {
         <MenuItem className="activemenu"><li className="activeli"><a href="/products">Products</a></li></MenuItem>
         <MenuItem className="activemenu"><li className="activeli"><a href="/services">Services</a></li></MenuItem>
         <MenuItem className="activemenu"><li className="activeli"><a href="/contact">Contact</a></li></MenuItem>
-                              
-            </Menu>
-          
-         
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },height:"inherit" }}>
-                            <nav className="nav-menu">
-                                  <ul className="nav-list">
-                                    <li className="">
-                                      <a href="/">Home</a>
-                                    </li>
-                                    <li><a href="/about">About</a></li>
-                                    <li><a href="/products">Products</a></li>
-                                    <li><a href="/services">Services</a></li>
-                                    <li><a href="/contact">Contact</a></li>
-                                  </ul>
-                                </nav>
-              
-          </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-          
-                             <ul className="header-icon" >
-                                          <li className="search">
-                                            <a className="icon" href="#">
-                                              <i className="fa fa-search" onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
-        aria-expanded={open}></i>
-    </a>
+         <MenuItem><ul className="header-icon" style={{padding:"0px"}}>
+                                          <li className="search icon1">
+                                            <a className="icon" href="#" style={{paddingLeft:"0px"}}>
+                                              <i className="fa fa-search"  onClick={() => {setModalShow(true);setAnchorElNav(null);}}></i>
+                                              </a>
                
                                           </li>
-                                          <li className="favorites">
-                                            <a className="icon" href="https://www.facebook.com/MultiplexGroupofCompanies">
+                                          <li className="favorites icon1">
+                                            <a className="icon" href="https://www.facebook.com/multiplexdrone/"  target="_blank">
                                               <i className="fa fa-facebook" aria-hidden="true"></i>
                                             </a>
                                           </li>
-                                          <li>
-                                            <a className="icon" href="https://www.instagram.com/multiplexgroup/">
-                                                <i className="fa fa-instagram" aria-hidden="true"></i>
-                                              </a>
-                                          </li>
-                                          <li>
-                                            <a className="icon" href="https://www.youtube.com/MultiplexFarmer">
+                                          
+                                          <li className="icon1">
+                                            <a className="icon" href="https://www.youtube.com/channel/UCIwF0gAUl27P-6cahvTE7vw"  target="_blank">
                                               <i className="fa fa-youtube" aria-hidden="true"></i>
                                             </a>
                                           </li>
-                                          <li>
-                                            <a className="icon" href="https://www.linkedin.com/company/multiplex-group-of-companies">
+                                          <li className="icon1">
+                                            <a className="icon" href="https://www.linkedin.com/company/multiplex-drone"  target="_blank">
                                               <i className="fa fa-linkedin" aria-hidden="true"></i>
                                             </a>
                                           </li>
                                         </ul>
-                                      
-                       <br /><Collapse in={open}>
- <InputGroup className="mb-3" id="example-collapse-text" style={{position:"absolute",
-          top:"70px",
-          zIndex:"1",
-          width:"180px"}}>
-        
-          <input type="search" className="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" style={{paddingLeft:"0px",borderColor:"#fff",backgroundColor:"#fff",height:"40px",borderRadius:"0px"}}/>
-
-          <InputGroup.Text id="basic-addon1" style={{backgroundColor:"green",color:"white",borderRadius:"0px" }}><i className="fa fa-search" aria-hidden="true"></i></InputGroup.Text>
-      </InputGroup>
-</Collapse>
-
-          </Typography>
+              </MenuItem>                     
+            </Menu>
+          
+         
+          <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' },height:"inherit",marginLeft:"10px"}}>
+                            <span style={{float:"left",width:"70%",paddingRight:"10%"}}>
+<ul className="header-icon" ><li className="link-head">
+                                      <a href="/">Home</a>
+                                    </li>
+                                    <li className="link-head"><a href="/about">About</a></li>
+                                    <li className="link-head"><a href="/products">Products</a></li>
+                                    <li className="link-head"><a href="/services">Services</a></li>
+                                    <li className="link-head"><a href="/contact">Contact</a></li>
+            </ul></span>
+             <ul className="header-icon" style={{float:"right",width:"30%"}}>
+                                          <li className="search icon1">
+                                            <a className="icon" href="#">
+                                              <i className="fa fa-search"  onClick={() => setModalShow(true)}></i>
+                                              </a>
+               
+                                          </li>
+                                          <li className="favorites icon1">
+                                            <a className="icon" href="https://www.facebook.com/multiplexdrone/" target="_blank">
+                                              <i className="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                          </li>
+                                        
+                                          <li className="icon1">
+                                            <a className="icon" href="https://www.youtube.com/channel/UCIwF0gAUl27P-6cahvTE7vw" target="_blank">
+                                              <i className="fa fa-youtube" aria-hidden="true"></i>
+                                            </a>
+                                          </li>
+                                          <li className="icon1">
+                                            <a className="icon" href="https://www.linkedin.com/company/multiplex-drone" target="_blank">
+                                              <i className="fa fa-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                          </li>
+                                        </ul>
+              
+          </Box>
+          
 
           
           <Typography
@@ -197,44 +197,9 @@ const ResponsiveAppBar = () => {
           >
             
           
-                             <ul className="header-icon" >
-                                          <li className="search">
-                                            <a className="icon" href="#">
-                                              <i className="fa fa-search" onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
-        aria-expanded={open}
-        ></i>
-    </a>
-               
-                                          </li>
-                                          <li className="favorites">
-                                            <a className="icon" href="#">
-                                              <i className="fa fa-facebook" aria-hidden="true"></i>
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a className="icon" href="#">
-                                              <i className="fa fa-youtube" aria-hidden="true"></i>
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a className="icon" href="#">
-                                              <i className="fa fa-linkedin" aria-hidden="true"></i>
-                                            </a>
-                                          </li>
-                                        </ul>
+                           
                                       
-         <br /><Collapse in={open}>
- <InputGroup className="mb-3" id="example-collapse-text" style={{position:"absolute",
-          top:"70px",
-          zIndex:"1",
-          width:"180px"}}>
-        
-          <input type="search" className="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" style={{paddingLeft:"0px",borderColor:"#fff",backgroundColor:"#fff",height:"40px",borderRadius:"0px"}}/>
-
-          <InputGroup.Text id="basic-addon1" style={{backgroundColor:"green",color:"white",borderRadius:"0px" }}><i className="fa fa-search" aria-hidden="true"></i></InputGroup.Text>
-      </InputGroup>
-</Collapse>
+         <br />
                    
           </Typography>
           <Box sx={{ flexGrow:0, display: { xs: 'flex', md: 'none' }}}>
@@ -245,7 +210,7 @@ const ResponsiveAppBar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              
+              style={{width:"inherit"}}
             >
               <MenuIcon sx={{ fontSize:30}} />
             </IconButton>
@@ -256,12 +221,41 @@ const ResponsiveAppBar = () => {
        
     </AppBar>
 
+<MGSCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+
+
+
+
 
 </>
   );
 };
 export default ResponsiveAppBar;
 
+
+function MGSCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      style={{paddingTop:'10px'}}
+    >
+     <InputGroup className="mb-3" id="example-collapse-text" style={{position:"absolute",
+          top:"70px",
+          zIndex:"1",
+         }}>
+        
+          <input type="search" className="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" style={{paddingLeft:"0px",borderColor:"#fff",backgroundColor:"#fff",height:"40px",borderRadius:"0px"}}/>
+
+          <InputGroup.Text id="basic-addon1" style={{backgroundColor:"green",color:"white",borderRadius:"0px" }}><i className="fa fa-search" aria-hidden="true"></i></InputGroup.Text>
+      </InputGroup>
+    </Modal>
+  );
+}
 
 
 // <AppBar position="static">
@@ -385,3 +379,43 @@ export default ResponsiveAppBar;
 //         </Toolbar>
 //       </Container>
 //     </AppBar>
+
+
+
+
+// <nav className="navbar navbar-expand-lg navbar-light bg-light">
+//   <div className="container-fluid">
+//     <a className="navbar-brand" href="#">Navbar</a>
+//     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+//       <span className="navbar-toggler-icon"></span>
+//     </button>
+//     <div className="collapse navbar-collapse" id="navbarSupportedContent">
+//       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+//         <li className="nav-item">
+//           <a className="nav-link active" aria-current="page" href="#">Home</a>
+//         </li>
+//         <li className="nav-item">
+//           <a className="nav-link" href="#">Link</a>
+//         </li>
+//         <li className="nav-item dropdown">
+//           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+//             Dropdown
+//           </a>
+//           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+//             <li><a className="dropdown-item" href="#">Action</a></li>
+//             <li><a className="dropdown-item" href="#">Another action</a></li>
+//             <li><hr className="dropdown-divider"/></li>
+//             <li><a className="dropdown-item" href="#">Something else here</a></li>
+//           </ul>
+//         </li>
+//         <li className="nav-item">
+//           <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+//         </li>
+//       </ul>
+//       <form className="d-flex">
+//         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+//         <button className="btn btn-outline-success" type="submit">Search</button>
+//       </form>
+//     </div>
+//   </div>
+// </nav>

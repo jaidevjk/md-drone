@@ -49,12 +49,17 @@ const responsive = {
     slidesToSlide: 1 // optional, default to 1.
   },
   tablet: {
-    breakpoint: { max: 1024, min: 600 },
+    breakpoint: { max: 1024, min: 768 },
     items: 2,
     slidesToSlide: 1 // optional, default to 1.
   },
+  // tablet: {
+  //   breakpoint: { max: 1024, min: 600 },
+  //   items: 2,
+  //   slidesToSlide: 1 // optional, default to 1.
+  // },
   mobile: {
-    breakpoint: { max: 600, min: 0 },
+    breakpoint: { max: 768, min: 0 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
 
@@ -103,9 +108,9 @@ const TestimonialCarousel = () => {
                                                                                     objectFit: "cover",
                                                                                     borderRadius: "50%",
                                                                                   }}/>
-              <h5 className="name">Manjunath</h5>
-              <div className="prof">clients</div>
-              <div className="testimon-content" style={{wordWrap: "break-word"}}>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</div>
+              <h5 className="name">Naveen More</h5>
+              <div className="prof">Assistant Cinematographer</div>
+              <div className="testimon-content" style={{wordWrap: "break-word"}}>I did attend Multirotor drone training -  Level 2, trainers are well qualified and taught me very well. I am completely satisified with the training, I would recommend for others who are passionate about drones to undergo training.</div>
             </div>
           </div>
 
@@ -119,9 +124,9 @@ const TestimonialCarousel = () => {
                                                                                     objectFit: "cover",
                                                                                     borderRadius: "50%",
                                                                                   }}/>
-                                                                                                <h5 className="name">Manjunath2</h5>
-              <div className="prof">clients</div>
-              <div className="testimon-content">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</div>
+                                                                                                <h5 className="name">Pallatheri Padashekhara Samithi</h5>
+              <div className="prof">President</div>
+              <div className="testimon-content">We did invite team Multiplex Drone to demonstrate agricultural drone to our paddy field in pallatheri, Palakkad, kerala, it was very positive response from the farmers.</div><br></br>
             </div>
           </div>
 
@@ -135,9 +140,9 @@ const TestimonialCarousel = () => {
                                                                                     objectFit: "cover",
                                                                                     borderRadius: "50%",
                                                                                   }}/>
-              <h5 className="name">Manjunath3</h5>
-              <div className="prof">clients</div>
-              <div className="testimon-content">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</div>
+              <h5 className="name">Muniraju Sorahunase</h5>
+              <div className="prof">Farmer</div>
+              <div className="testimon-content">5 liter medicine was sprayed over chrysanthemum flower for 0.5 acre, with just 6 min, this would bring revolution in the farming and am very happy with the spray quality</div><br></br><br></br>
             </div>
           </div>
     

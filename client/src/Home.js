@@ -100,7 +100,7 @@ const [spraysererr,setSprayserErr] =useState([]);
                 .catch((error) => {
                   //console.log("err",error.response.data.replace("enquiries validation failed:", "").split(",",20));
                   console.log(error.response)
-                  setErr(error.response.data.replace("enquiries validation failed:", "").split(",",20))
+                  //setErr(error.response.data.replace("enquiries validation failed:", "").split(",",20))
                  })
                 .finally(()=>{
                   
@@ -117,7 +117,7 @@ const [spraysererr,setSprayserErr] =useState([]);
   <div className="col-12" style={{padding:"10px"}} >
       <div style={{}}>
    
-<video  autoPlay loop muted width="100%">
+<video class="video-box" autoPlay loop muted width="100%" >
           <source src="landing-video.mp4" type="video/mp4"></source>
         </video>
         </div>
@@ -191,7 +191,7 @@ const [spraysererr,setSprayserErr] =useState([]);
         <div className="row align-items-center" style={{paddingTop:"0px",margin:"0px"}}>
           <div className="price-img-block col-md-6 col-sm-0" style={{padding:"0px",marginTop:"0px",height:"inherit"}}>
             <div className="price-img-cover" style={{padding:"0px"}}>
-              <img className="lazy" src="img/best-img.jpg"  alt="img" height="555px" width="inherit" />
+              <img className="lazy" src="img/best-img.jpg"  alt="img" height="620px" width="inherit" />
               <img className="price-drone " src="img/drone-1.png"  alt="img" style={{padding:"0px",margin:"0px"}}/>
             </div>
           </div>
@@ -211,7 +211,7 @@ const [spraysererr,setSprayserErr] =useState([]);
             <button className="quiry-btn" onClick={() => setShowspray(true)}>book now</button>
             </div>
            
-            <div className="price-info" style={{textAlign: "justify",padding:"20px"}}>
+            <div className="price-info" style={{textAlign: "left",padding:"20px"}}>
               <h1 style={{color:"#1da912"}} className="title-left">For Customized Drones</h1>
               <p className='sprayed' style={{color:"#fff"}}>Every drone is manufactured with carbon fibers and aerospace-grade materials with high precision and controlled with industrial-grade flight controllers. Enquire now for customized/agricultural drones.</p>
              
@@ -226,9 +226,9 @@ const [spraysererr,setSprayserErr] =useState([]);
         <h2>our proucts</h2>
        
 
-         <section className="serv-block" style={{margin:"5%",width:"90%"}}> 
+         <section className="serv-block" style={{margin:"0%",width:"100%"}}> 
         
-          <a href="/md5q" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+          <a href="/md5q" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
             <img className="lazy" src="img/img-1.jpg" alt="img" />
             <div className="serv-block-info">
@@ -237,7 +237,7 @@ const [spraysererr,setSprayserErr] =useState([]);
               <span>read more</span>
             </div>
           </a>
-          <a href="/md10q" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+          <a href="/md10q" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
             <img className="lazy" src="img/img-2.jpg" alt="img" />
             <div className="serv-block-info">
@@ -246,9 +246,7 @@ const [spraysererr,setSprayserErr] =useState([]);
               <span>read more</span>
             </div>
           </a>
-          </section>
-        <section className="serv-block" style={{margin:"5%",width:"90%"}}>
-          <a href="/md16p" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+          <a href="/md16p" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
             <img className="lazy" src="img/img-3.jpg" alt="img" />
             <div className="serv-block-info">
@@ -256,7 +254,7 @@ const [spraysererr,setSprayserErr] =useState([]);
               <span>read more</span>
             </div>
           </a>
-          <a href="/md10h" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+          <a href="/md10h" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
             <img className="lazy" src="img/img-4.jpg" alt="img" />
             <div className="serv-block-info">
@@ -264,15 +262,15 @@ const [spraysererr,setSprayserErr] =useState([]);
               <span>read more</span>
             </div>
           </a>
-        </section>
+          </section>
         </div>
-<br />
+
 
 <section className="s-blog" style={{padding: "0px"}}>
       <div className="container s-anim">
         <h2 style={{padding:" 0px",marginTop:"30px"}}>Our Clients</h2>
         <div className="row">
-          <img className="clients" src="img/clients.png" alt="img" style={{padding: "0px",width: "100%"}} />
+          <img className="clients" src="img/clients.png" alt="img" style={{padding: "5px", marginTop:  "20px", width: "90%"}} />
     </div>
     </div>
     </section>
@@ -286,21 +284,21 @@ const [spraysererr,setSprayserErr] =useState([]);
 
         
           <div className="col-12 col-md-4 col-sm-10 post-item" style={{padding:"1%",margin:"0px"}}>
-            <div className="prod-thumbnail" style={{padding:"0%",margin:"0px"}}>
+            <div className="prod-thumbnail" style={{padding:"5%",margin:"10px"}}>
               <a><iframe className="lazy" src="https://www.youtube.com/embed/l1OVENpxFkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
             </div>
             
           </div>
         
           <div className="col-12 col-md-4 col-sm-10 post-item" style={{padding:"1%",margin:"0px"}}>
-            <div className="prod-thumbnail" style={{padding:"0%",margin:"0px"}}>
+            <div className="prod-thumbnail" style={{padding:"5%",margin:"10px"}}>
               <a><iframe className="lazy" src="https://www.youtube.com/embed/LiafM_WhQok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
             </div>
             
           </div>
 
           <div className="col-12 col-md-4 col-sm-10 post-item" style={{padding:"1%",margin:"0px"}}>
-            <div className="prod-thumbnail" style={{padding:"0%",margin:"0px"}}>
+            <div className="prod-thumbnail" style={{padding:"5%",margin:"10px"}}>
               <a><iframe className="lazy" src="https://www.youtube.com/embed/ZJUriaB6_3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
             </div>
             
@@ -322,6 +320,7 @@ const [spraysererr,setSprayserErr] =useState([]);
         </section>
 <Modal
       show={showspray} onHide={handleClosespray}
+      style={{paddingTop:'0px'}}
     > 
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -336,7 +335,7 @@ const [spraysererr,setSprayserErr] =useState([]);
             <label>Full Name</label>
             <input  type="text" name="yourname" placeholder="Name" style={{color:"black",padding:"5px"}} required/>         
             <lable>Contact Number</lable><br/>
-            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} required/>
+            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} pattern="[0-9]{10}" required/>
             <lable>Email</lable><br/>
             <input  type="email" name="youremail" placeholder="Email" style={{color:"black",padding:"5px"}} required />
             <lable>Place</lable><br/>
@@ -347,9 +346,7 @@ const [spraysererr,setSprayserErr] =useState([]);
             <input type="text" name="youracres" placeholder=""  style={{color:"black",padding:"5px",}} required/>         
             <lable>Description</lable>
             <textarea  name="yourtext" placeholder="Message" style={{color:"black",padding:"5px"}} required></textarea>
-{err.map((val)=>{ return(<div style={{color:"red",padding:"5px"}}>{val}</div>)
-                          
-                         })}
+
 
             <button className="btn"  style={{marginTop:"10px",background:"#1da912",color:"#fff"}}>SUBMIT</button>
         </form>
@@ -361,6 +358,7 @@ const [spraysererr,setSprayserErr] =useState([]);
 
 <Modal
       show={show} onHide={handleClose}
+      style={{paddingTop:'5px'}}
     > 
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -375,7 +373,7 @@ const [spraysererr,setSprayserErr] =useState([]);
             <label>Full Name</label>
             <input  type="text" name="yourname" placeholder="Name" style={{color:"black",padding:"5px"}} required/>         
             <lable>Contact Number</lable><br/>
-            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} required/>
+            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} pattern="[0-9]{10}"required/>
             <lable>Email</lable><br/>
             <input  type="email" name="youremail" placeholder="Email" style={{color:"black",padding:"5px"}} required />
             <lable>Place</lable><br/>
@@ -383,9 +381,7 @@ const [spraysererr,setSprayserErr] =useState([]);
               
             <lable>Description</lable>
             <textarea  name="yourtext" placeholder="Message" style={{color:"black",padding:"5px"}} required></textarea>
-{err.map((val)=>{ return(<div style={{color:"red",padding:"5px"}}>{val}</div>)
-                          
-                         })}
+
 
             <button className="btn"  style={{marginTop:"10px",background:"#1da912",color:"#fff"}}>SUBMIT</button>
         </form>

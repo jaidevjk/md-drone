@@ -34,7 +34,7 @@ function Gallery() {
             <h1 className="title">Gallery</h1>
             <div className="breadcrumbs">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">home</a></li>
                     <li>Gallery</li>
                 </ul>
             </div>
@@ -43,28 +43,21 @@ function Gallery() {
 <section>
 <div className="container">
             <h2>Video</h2>
-            <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
         </div>
 <Carousel>
       <Carousel.Item>
         <div className="slide-video">
-                <video  autoPlay loop muted width="100%">
-          <source src="https://assets.mixkit.co/videos/56/56-720.mp4" type="video/mp4"></source>
-        </video>
+                
             </div>
       </Carousel.Item>
       <Carousel.Item>
         <div className="slide-video">
-                <video  autoPlay loop muted width="100%">
-                    <source src="https://assets.mixkit.co/videos/11/11-720.mp4" type="video/mp4" />
-                </video>
+                
             </div>
       </Carousel.Item>
       <Carousel.Item>
               <div className="slide-video">
-                <video  autoPlay loop muted width="100%">
-                    <source src="https://assets.mixkit.co/videos/558/558-720.mp4" type="video/mp4" />
-                </video>
+                
             </div>
       </Carousel.Item>
     </Carousel>
