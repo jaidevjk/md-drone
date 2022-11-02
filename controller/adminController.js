@@ -17,7 +17,7 @@ const secret = jwtsecretO;
 // console.log(secret)
 
 const createUser = async(req,res) =>{
-	
+    
 const { email, password , name} = req.body;
 console.log(email)
   try {
@@ -97,25 +97,10 @@ const { email, password } = req.body;
 
 };
 
-const listUsers  = function(req,res)
-{
-	console.log(Admin);
-	Admin.find(function(error,userList){
-        
-        if(error)
-        {
-        	console.log(error);
-        }else{
-        	console.log(userList);
-        	res.json(userList);
-        }
-	})
-};
-
 // const listUsers = (req,res) => {
 //     Admin.findById(req.user.id)
 //         .select('-password')
 //         .then(user => res.json(user));
 // }
 
-module.exports = {createUser,listUsers,loginUser};
+module.exports = {createUser,loginUser};

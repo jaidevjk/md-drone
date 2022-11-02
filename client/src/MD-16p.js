@@ -92,37 +92,37 @@ const sendEnquiryDetails=async(e)=>{
           <div className="col-6 col-md-4 col-xl-2">
             <div className="block-icon">
               <img src="img/icon-tab-111.svg" alt="img" />
-              <h6>takeoff Weight 49kg</h6>
+              <h6>takeoff Weight <br /> 49kg</h6>
             </div>
           </div>
           <div className="col-6 col-md-4 col-xl-2">
             <div className="block-icon">
               <img src="img/icon-tab-2.svg" alt="img" />
-              <h6>Endurance 40minutes</h6>
+              <h6>Endurance <br /> 40minutes</h6>
             </div>
           </div>
           <div className="col-6 col-md-4 col-xl-2">
             <div className="block-icon">
               <img src="img/icon-tab-3.svg" alt="img" />
-              <h6>flying speed 8m/s</h6>
+              <h6>flyingspeed <br /> 8m/s</h6>
             </div>
           </div>
           <div className="col-6 col-md-4 col-xl-2">
             <div className="block-icon">
               <img src="img/icon-tab-4.svg" alt="img" />
-              <h6>tank volume 16liters</h6>
+              <h6>tank volume <br /> 16liters</h6>
             </div>
           </div>
           <div className="col-6 col-md-4 col-xl-2">
             <div className="block-icon">
               <img src="img/icon-tab-5.svg" alt="img" />
-              <h6>power backup 24hrs</h6>
+              <h6>power backup <br /> 24hrs</h6>
             </div>
           </div>
           <div className="col-6 col-md-4 col-xl-2">
             <div className="block-icon">
               <img src="img/icon-tab-6.svg" alt="img" />
-              <h6>transmission 1000m</h6>
+              <h6>transmission <br /> 1000m</h6>
             </div>
           </div>
         </div>
@@ -278,6 +278,46 @@ const sendEnquiryDetails=async(e)=>{
             </div>
           </a>
         </section>
+        <section className="serv-block" style={{margin:"20px",width:"90%"}}> 
+        
+         <a href="/ikshana" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/img-1.jpg" alt="img" />
+            <div className="serv-block-info">
+              <h3>/ikshana</h3>
+              
+              <span>read more</span>
+            </div>
+          </a>
+          <a href="/chotabheem" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/chotabheem.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>ChotaBheem</h3>
+              
+              <span>read more</span>
+            </div>
+          </a>
+          </section>
+          
+          <section className="serv-block" style={{margin:"20px",width:"90%"}}> 
+          <a href="/fogstar" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/fogstar.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>FogStar</h3>
+              <span>read more</span>
+            </div>
+          </a>
+          <a href="/bheem" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/bheem.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>Bheem</h3>
+              <span>read more</span>
+            </div>
+          </a>
+        </section>
         </div>
     </section>
 
@@ -332,7 +372,7 @@ const sendEnquiryDetails=async(e)=>{
             <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} pattern="[0-9]{10}" required/>
             <lable>Email</lable><br/>
             <input  type="email" name="youremail" placeholder="Email" style={{color:"black",padding:"5px"}} required />
-            <button className="btn"  style={{marginTop:"10px",background:"#1da912",color:"#fff"}}>SUBMIT</button>
+            <button className="btn"  style={{marginTop:"10px",background:"#1da912",color:"#fff"}}>Download</button>
         </form>
                          
       </Modal.Body>
@@ -340,6 +380,17 @@ const sendEnquiryDetails=async(e)=>{
     </Modal>
  <ToastContainer />
 
+
+<a
+        href="https://wa.me/916362900041"
+        target="_blank"
+        rel="noopener noreferrer"
+                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
+
+      >
+                  <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
+
+      </a>
 
 </div>
   );

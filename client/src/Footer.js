@@ -10,12 +10,40 @@ import './style.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
-
+import axios from 'axios';
+import 'react-toastify/dist/ReactToastify.css'; 
+import { ToastContainer, toast } from 'react-toastify';
 
 function Footer() {
   const [show, setShow] = useState(false);
   const handleClose = () => {setShow(false)};
   const handleShow = () => setShow(true);
+
+  const Subscriber=async(e)=>{
+    e.preventDefault();
+    const Subscriber = e.target.subscriber.value;
+    let objectOb = {
+            
+            email: Subscriber,
+           
+
+          }
+    //alert(Subscriber);
+    await axios
+                .post('http://localhost:4003/subscribe', objectOb)
+                .then((response) => {
+                  console.log(response);
+                  console.log(objectOb);
+                  toast.success("Successfully subscribed.",{position: "top-center",});
+                 e.target.subscriber.value= " ";
+                })
+                .catch((error) => {
+                  console.log(objectOb);
+                  console.log(error.response.data)
+                  toast.error(error.response.data,{position: "top-center",});
+                 })
+  }
+
   return (
 <div className="">                          
 
@@ -23,14 +51,14 @@ function Footer() {
         <footer style={{margin:"0px"}}>
     
       <div className="row " style={{margin:"5px",marginTop:"20px"}}>
-        <div className="col-12 col-sm-12 col-lg-3 col-md-6 footer-info">
+        <div className="col-12 col-sm-12 col-lg-3 col-md-6 footer-info" >
           <h6>contact us</h6>
-          <p style={{color:"#fff"}}><i class="fa fa-map-marker" style={{marginRight:"10px"}}></i><span><a href="https://www.google.com/maps/place/Multiplex+Drone+Pvt+Ltd/@12.9616582,77.516885,15z/data=!4m12!1m6!3m5!1s0x0:0xb5274ccd5d4d87ed!2sMultiplex+Drone+Pvt+Ltd!8m2!3d12.9609916!4d77.5168571!3m4!1s0x0:0xb5274ccd5d4d87ed!8m2!3d12.9609916!4d77.5168571?hl=en" target="_blank" style={{color:"inherit",textDecoration:"none"}}>No.50/1, Manasanagar,
+          <p style={{color:"#fff"}}><i className="fa fa-map-marker" style={{marginRight:"10px"}}></i><span><a href="https://www.google.com/maps/place/Multiplex+Drone+Pvt+Ltd/@12.9616582,77.516885,15z/data=!4m12!1m6!3m5!1s0x0:0xb5274ccd5d4d87ed!2sMultiplex+Drone+Pvt+Ltd!8m2!3d12.9609916!4d77.5168571!3m4!1s0x0:0xb5274ccd5d4d87ed!8m2!3d12.9609916!4d77.5168571?hl=en" target="_blank" style={{color:"inherit",textDecoration:"none"}}>No.50/1, Manasanagar,
             Nagarbhavi, <br /> Bangalore-560072</a></span>
             <br />
             <br />
            
-            <i className="fa fa-envelope" aria-hidden="true" style={{float:"left"}}></i><span style={{float:"right",width:'90%'}}>corporate@multiplexdrone.com</span>
+            <i className="fa fa-envelope" aria-hidden="true" style={{float:"left",padding:"0px",width:"25px",}}></i><span style={{width:"auto"}}>corporate@multiplexdrone.com</span>
             <br />
             <i className="fa fa-phone" aria-hidden="true" style={{marginRight:"10px"}}></i><span>+91-80-23497464</span>
             <br />
@@ -39,7 +67,7 @@ function Footer() {
         </div>
         <div className="col-12 col-sm-12 col-md-12 col-lg-6  blok-link footer-link" style={{margin:"0px",padding:"0px"}}>
           <div className="row" style={{margin:"0px"}}>
-          <ul className="col-4 col-sm-4 col-lg-4 col-md-4">
+          <ul className="col-4 col-sm-4 col-lg-4 col-md-4 support-pages">
           <h6>Pages</h6>
             <li ><a href="/">Home</a></li>
             <li><a href="/about">About us</a></li>
@@ -48,7 +76,7 @@ function Footer() {
           </ul>
       
           
-          <ul className="col-4 col-sm-4 col-lg-4 col-md-4">
+          <ul className="col-4 col-sm-4 col-lg-4 col-md-4 support-foot">
           <h6>info</h6>
             <li><a href="#">Training</a></li>
             <li><a href="#">Gallery</a></li>
@@ -56,7 +84,7 @@ function Footer() {
             <li><a href="#">Careers</a></li>
           </ul>
         
-          <ul className="col-4 col-sm-4 col-lg-3 col-md-4">
+          <ul className="col-4 col-sm-4 col-lg-3 col-md-4 support-foot" >
           <h6>support</h6>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#terms-conditions">Terms & Conditions</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#refund-policy">Refund Policy</a></li>
@@ -69,9 +97,9 @@ function Footer() {
         
         <div className="col-12 col-sm-12 col-md-6 col-lg-3  footer-subscribe">
           <h6>subscribe</h6>
-          <form action="" className="subscribe-form">
+          <form className="subscribe-form" onSubmit={Subscriber}>
             <div className="input-group mb-3">
-              <input type="email" className="form-control" placeholder="subscribe" aria-label="Username" aria-describedby="basic-addon1" />
+              <input type="email" className="form-control" name="subscriber" placeholder="subscribe" aria-label="Username" aria-describedby="basic-addon1" required/>
               <button className="input-group-text text-light" style={{backgroundColor: "#1da912"}}>send</button>
             </div>
           </form>
@@ -446,7 +474,7 @@ The laws of India would govern these terms and conditions. By accessing this web
 
 
 
-
+<ToastContainer />
 </div>     
   );
 }

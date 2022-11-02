@@ -1012,16 +1012,15 @@ header.header-scroll .logo-strong {
 }
 .price-img-cover .price-drone {
   position: absolute;
-  width:50%;
+  width:60%;
   z-index: 1;
-  top: 20%;
-  /* right: 10px; */
+  top: 23%;
   left:15%;
   max-width: none;
   animation: levitation 5s linear 0s infinite normal;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
-  /* border: solid green 2px; */
 }
+
 @keyframes levitation {
   from {
     transform: rotate(0deg) translateX(50px) rotate(0deg);
@@ -3681,7 +3680,7 @@ blockquote:before {
     max-width: 48%;
   }
   footer {
-    padding-top: 65px;
+    padding-top: 20px;
   }
   .address{
     color: grey;
@@ -4573,7 +4572,7 @@ blockquote:before {
     padding: 25px 0;
   }
   footer {
-    padding-top: 60px;
+    padding-top: 20px;
   }
   .footer-logo {
     display: inline-block;
@@ -4870,7 +4869,7 @@ blockquote:before {
     left: 0;
   }
   .footer-info {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
   .blok-link {
     margin-top: 50px;
@@ -5075,6 +5074,16 @@ blockquote:before {
 .logo-disappear{
   display: none;
 }
+.blok-link li a {
+  text-transform: capitalize;
+  width: 100%;
+ word-break: break-all;
+  font-size: 15px;
+}
+.blok-link .support-foot{
+padding-left: 0px;
+}
+
 }
 
 @media (max-width: 479px) {
@@ -5085,16 +5094,21 @@ blockquote:before {
   }
   .blok-link  {
     text-transform: capitalize;
-    width: 100%;
-     
-    
+    width: 100%;   
 }
+
 .blok-link li a {
     text-transform: capitalize;
     width: 100%;
-   word-break: break-all;
+    word-break: break-all;
     font-size: 10px;
+    
 }
+.blok-link .support-foot{
+  padding-left: 0px;
+}
+
+
   .block-icon img {
     max-height: 40px;
   }

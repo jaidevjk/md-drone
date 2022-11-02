@@ -9,9 +9,12 @@ function App() {
   return (
     <div className="App">
     <RouterApp />
-    </div>
+     
+      </div>
    
   );
 }
 
 export default App;
+
+        //            <img className="lazy" src="img/img-2.jpg" alt="img" />

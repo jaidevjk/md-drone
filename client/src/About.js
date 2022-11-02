@@ -113,7 +113,16 @@ function About() {
 
 
 
+<a
+        href="https://wa.me/919591999044"
+        target="_blank"
+        rel="noopener noreferrer"
+                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
 
+      >
+                  <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
+
+      </a>
 
 </div>
   );

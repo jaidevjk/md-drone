@@ -12,19 +12,22 @@ var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var jwtRuter = require('./routes/jwt');
+var adminRuter = require('./routes/admin');
 
 var galleryRuter = require('./routes/gallery');
 var enquiryRuter = require('./routes/enquirey');
 var sprayservicesenquiryRuter = require('./routes/sprayservicesenquiry');
 var contactusRuter =require('./routes/contactus');
+var subscribeRuter = require('./routes/subscription');
 var app = express();
 
 
 
 // Parses urlencoded bodies
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+// app.use(bodyParser.json({limit: '50mb'}));
+// app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 
 const corsOptions ={
@@ -39,7 +42,7 @@ app.use(cors(corsOptions));
 app.set("view engine", "ejs");
 
 
-let mongoConnUrl = "mongodb+srv://jaidevk:4AL15ME715@cluster0.kmhzh.mongodb.net/?retryWrites=true&w=majority";
+let mongoConnUrl = "mongodb://jaidevk:4AL15ME715@cluster0-shard-00-00.kmhzh.mongodb.net:27017,cluster0-shard-00-01.kmhzh.mongodb.net:27017,cluster0-shard-00-02.kmhzh.mongodb.net:27017/?ssl=true&replicaSet=atlas-9xqepa-shard-0&authSource=admin&retryWrites=true&w=majority";
 mongoose.connect(mongoConnUrl, { useNewUrlParser: true });
 let db = mongoose.connection;
 db.on("error", function (error) {
@@ -68,7 +71,9 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/client')));
+
 // for connecing frontend in heroku
 app.use(express.static(path.join(__dirname, 'client','build')));
 
@@ -78,12 +83,12 @@ app.get('*', function (req, res) {
 
 //app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/jwt',jwtRuter);
+app.use('/admin',adminRuter);
 app.use('/gallery',galleryRuter);
 app.use('/enquiry',enquiryRuter);sprayservicesenquiryRuter
 app.use('/sprayservicesenquiry',sprayservicesenquiryRuter);
 app.use('/contactusenquiry',contactusRuter);
-
+app.use('/subscribe',subscribeRuter);
 
 
 //For cors error-policy

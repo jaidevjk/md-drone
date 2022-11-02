@@ -4,12 +4,12 @@ const {
   fetchEnquiries,
   deleteEnquiries,
 } = require("../controller/enquiryController.js");
-//const auth = require("../middlewares/auth.js");
+const auth = require("../middlewares/authentication.js");
 
 const router = express.Router();
 
 router.post("/", createEnquiry);
-router.get("/",  fetchEnquiries);
+router.get("/",fetchEnquiries);
 router.delete("/:id", deleteEnquiries);
 module.exports = router;
 

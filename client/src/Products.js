@@ -112,6 +112,50 @@ const sendEnquiryDetails=async(e)=>{
             </div>
           </a>
         </section>
+
+
+
+      <section className="serv-block" style={{margin:"20px",width:"90%"}}> 
+        
+         <a href="/ikshana" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/img-1.jpg" alt="img" />
+            <div className="serv-block-info">
+              <h3>/ikshana</h3>
+              
+              <span>read more</span>
+            </div>
+          </a>
+          <a href="/chotabheem" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/chotabheem.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>ChotaBheem</h3>
+              
+              <span>read more</span>
+            </div>
+          </a>
+          </section>
+          
+          <section className="serv-block" style={{margin:"20px",width:"90%"}}> 
+          <a href="/fogstar" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/fogstar.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>FogStar</h3>
+              <span>read more</span>
+            </div>
+          </a>
+          <a href="/bheem" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/bheem.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>Bheem</h3>
+              <span>read more</span>
+            </div>
+          </a>
+        </section>
+
       </div>
 <br /><br />
 
@@ -148,7 +192,16 @@ const sendEnquiryDetails=async(e)=>{
 
 
  <ToastContainer />
+<a
+        href="https://wa.me/916362900041"
+        target="_blank"
+        rel="noopener noreferrer"
+                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
 
+      >
+                  <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
+
+      </a>
 </div>
   );
 }

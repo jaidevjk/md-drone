@@ -78,9 +78,10 @@ const sendEnquiryDetails=async(e)=>{
             <h6 style={{color: "black"}}>Head Office</h6>
           <p>No.50/1, Manasanagar, Nagarbhavi,
 Bangalore-560072</p>
-          <ul className="about-cont" style={{textAlign: "center"}}>
+             
+          <ul className="about-cont" style={{textAlign: "center",paddingTop:"0px"}}>
             <li style={{textAlign: "center"}}>
-              <a href="tel:+91-80-23497464" style={{textAlign: "center"}}>
+              <a href="tel:+91-80-23497464" style={{textAlign: "left"}}>
                 <i className="fa fa-phone" aria-hidden="true" style={{color:"black"}}></i>
                 <span>+91-80-23497464</span>
               </a>
@@ -92,22 +93,22 @@ Bangalore-560072</p>
               </a>
             </li>
           </ul>
-
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.169726426076!2d77.51469591464506!3d12.960988890862854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5e2bc26925%3A0xb5274ccd5d4d87ed!2sMultiplex%20Drone%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1666506981679!5m2!1sen!2sin"   
+          <div className=' row map'>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.169726426076!2d77.51469591464506!3d12.960988890862854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5e2bc26925%3A0xb5274ccd5d4d87ed!2sMultiplex%20Drone%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1666506981679!5m2!1sen!2sin"   
               allowfullscreen="allow" 
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade"
-              style={{width:"330px",height:"330px",border:"solid green 2px"}}
+              style={{border:"solid green 1px",padding:"6px"}}
+              className='col'
               ></iframe>
-
+</div> 
           </div>
           </div>
         </div>
     </section>
 
-<section className="s-contacts s-main-contacts" >
-      <div className="container s-anim">
+<section className="s-contacts s-main-contacts" style={{}}>
+      <div className="container ">
         <h2>Contact us</h2>
         <form id='contactform' name="contactform" onSubmit={sendEnquiryDetails}>
           <ul className="form-cover" style={{padding:"0px"}}>
@@ -138,7 +139,16 @@ Bangalore-560072</p>
 
       <ToastContainer />
 
+<a
+        href="https://wa.me/919591999044"
+        target="_blank"
+        rel="noopener noreferrer"
+                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
 
+      >
+                  <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
+
+      </a>
 
 </div>
   );

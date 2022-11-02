@@ -117,7 +117,7 @@ const [spraysererr,setSprayserErr] =useState([]);
   <div className="col-12" style={{padding:"10px"}} >
       <div style={{}}>
    
-<video class="video-box" autoPlay loop muted width="100%" >
+<video className="video-box" autoPlay loop muted width="100%" >
           <source src="landing-video.mp4" type="video/mp4"></source>
         </video>
         </div>
@@ -165,7 +165,7 @@ const [spraysererr,setSprayserErr] =useState([]);
             <li className="item" rel="tab5">
               <div className="block-icon">
                 <img src="img/icon-tab-4.svg" alt="img" />
-                <h4>5000+</h4>
+                <h4>10000+</h4>
                 <h6>acres sprayed</h6>
                 <div className="info-span" style={{color:"white"}}><span style={{display:"inline"}}><h4 style={{display:"inline"}}>5000+</h4></span> <span style={{display:"inline"}}><h6 style={{display:"inline"}}>acres</h6></span></div>
 
@@ -174,7 +174,7 @@ const [spraysererr,setSprayserErr] =useState([]);
             <li className="item" rel="tab6">
               <div className="block-icon">
                 <img src="img/icon-tab-6.svg" alt="img" />
-                <h4>2500+</h4>
+                <h4>5000+</h4>
                 <h6>farmers</h6>
                 <div className="info-span" style={{color:"white"}}><span style={{display:"inline"}}><h4 style={{display:"inline"}}>2500+</h4></span> <span style={{display:"inline"}}><h6 style={{display:"inline"}}>farmers</h6></span></div>
                 
@@ -262,7 +262,48 @@ const [spraysererr,setSprayserErr] =useState([]);
               <span>read more</span>
             </div>
           </a>
+
           </section>
+
+          <section className="serv-block" style={{margin:"0%",width:"100%"}}> 
+        
+          <a href="/ikshana" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/img-1.jpg" alt="img" />
+            <div className="serv-block-info">
+              <h3>Ikshana</h3>
+              
+              <span>read more</span>
+            </div>
+          </a>
+          <a href="/chotabheem" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/chotabheem.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>ChotaBheem</h3>
+              
+              <span>read more</span>
+            </div>
+          </a>
+          <a href="/fogstar" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/fogstar.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>FogStar</h3>
+              <span>read more</span>
+            </div>
+          </a>
+          <a href="/bheem" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
+            <span className="border-item"></span>
+            <img className="lazy" src="img/bheem.png" alt="img" />
+            <div className="serv-block-info">
+              <h3>Bheem</h3>
+              <span>read more</span>
+            </div>
+          </a>
+          
+          </section>
+
         </div>
 
 
@@ -285,21 +326,21 @@ const [spraysererr,setSprayserErr] =useState([]);
         
           <div className="col-12 col-md-4 col-sm-10 post-item" style={{padding:"1%",margin:"0px"}}>
             <div className="prod-thumbnail" style={{padding:"5%",margin:"10px"}}>
-              <a><iframe className="lazy" src="https://www.youtube.com/embed/l1OVENpxFkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+              <a><iframe className="lazy" src="https://www.youtube.com/embed/l1OVENpxFkM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></a>
             </div>
             
           </div>
         
           <div className="col-12 col-md-4 col-sm-10 post-item" style={{padding:"1%",margin:"0px"}}>
             <div className="prod-thumbnail" style={{padding:"5%",margin:"10px"}}>
-              <a><iframe className="lazy" src="https://www.youtube.com/embed/LiafM_WhQok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+              <a><iframe className="lazy" src="https://www.youtube.com/embed/LiafM_WhQok" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></a>
             </div>
             
           </div>
 
           <div className="col-12 col-md-4 col-sm-10 post-item" style={{padding:"1%",margin:"0px"}}>
             <div className="prod-thumbnail" style={{padding:"5%",margin:"10px"}}>
-              <a><iframe className="lazy" src="https://www.youtube.com/embed/ZJUriaB6_3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+              <a><iframe className="lazy" src="https://www.youtube.com/embed/ZJUriaB6_3g" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></a>
             </div>
             
           </div>
@@ -389,7 +430,17 @@ const [spraysererr,setSprayserErr] =useState([]);
       </Modal.Body>
          
     </Modal>
-      <ToastContainer />                 
+      <ToastContainer />  
+      <a
+        href="https://wa.me/919591999044"
+        target="_blank"
+        rel="noopener noreferrer"
+                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
+
+      >
+                  <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
+
+      </a>               
 </div>
   );
 }
