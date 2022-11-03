@@ -77,7 +77,7 @@ const sendEnquiryDetails=async(e)=>{
         
           <a href="/md5q" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-1.jpg" alt="img" />
+            <img className="lazy" src="img/img-1.png" alt="img" />
             <div className="serv-block-info">
               <h3>md 5q</h3>
               
@@ -121,14 +121,14 @@ const sendEnquiryDetails=async(e)=>{
             <span className="border-item"></span>
             <img className="lazy" src="img/img-1.jpg" alt="img" />
             <div className="serv-block-info">
-              <h3>/ikshana</h3>
+              <h3>ikshana</h3>
               
               <span>read more</span>
             </div>
           </a>
           <a href="/chotabheem" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/chotabheem.png" alt="img" />
+            <img className="lazy" src="img/chotabheem1.png" alt="img" />
             <div className="serv-block-info">
               <h3>ChotaBheem</h3>
               

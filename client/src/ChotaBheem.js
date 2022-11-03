@@ -78,7 +78,7 @@ const sendEnquiryDetails=async(e)=>{
         <div className="row we-offer-cover">
           <div className="col-12 col-sm-6 we-offer-item">
             <div className="offer-item-img">
-              <img src="img/chotabheem.png" alt="img" />
+              <img src="img/chotabheem1.png" alt="img" />
             </div>
           </div>
           
@@ -238,7 +238,7 @@ const sendEnquiryDetails=async(e)=>{
         
           <a href="/md5q" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-1.jpg" alt="img" />
+            <img className="lazy" src="img/img-1.png" alt="img" />
             <div className="serv-block-info">
               <h3>md 5q</h3>
               
@@ -273,20 +273,23 @@ const sendEnquiryDetails=async(e)=>{
             </div>
           </a>
         </section>
-        <section className="serv-block" style={{margin:"20px",width:"90%"}}> 
+
+
+
+      <section className="serv-block" style={{margin:"20px",width:"90%"}}> 
         
          <a href="/ikshana" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
             <img className="lazy" src="img/img-1.jpg" alt="img" />
             <div className="serv-block-info">
-              <h3>/ikshana</h3>
+              <h3>ikshana</h3>
               
               <span>read more</span>
             </div>
           </a>
           <a href="/chotabheem" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/chotabheem.png" alt="img" />
+            <img className="lazy" src="img/chotabheem1.png" alt="img" />
             <div className="serv-block-info">
               <h3>ChotaBheem</h3>
               
@@ -313,6 +316,7 @@ const sendEnquiryDetails=async(e)=>{
             </div>
           </a>
         </section>
+
         </div>
     </section>
 

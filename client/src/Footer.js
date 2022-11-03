@@ -78,9 +78,9 @@ function Footer() {
           
           <ul className="col-4 col-sm-4 col-lg-4 col-md-4 support-foot">
           <h6>info</h6>
-            <li><a href="#">Training</a></li>
+            <li><a href="/training">Training</a></li>
             <li><a href="#">Gallery</a></li>
-            <li><a href="#">News & Events</a></li>
+            <li><a href="/newsandevents">News & Events</a></li>
             <li><a href="#">Careers</a></li>
           </ul>
         
@@ -436,7 +436,7 @@ Our privacy policy is subject to change at any time without notice. To make sure
       </div>
       <div className="modal-body main">
       <div><h6 style={{color:"black",textAlign:"center"}}>Welcome to www.multiplexdrone.com</h6></div>
-        <p className="text-dark"> These terms and conditions outline the rules and regulations for the use of www.multiplexdronecom.</p>
+        <p style={{textAlign:"justify",wordSpacing:"0px",whiteSpace: "nowrap"}}>These terms and conditions outline the rules and regulations for the use of www.multiplexdronecom.</p>
         <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use www.multiplexdrone.com if you do not agree to take all of the terms and conditions stated on this page.</p>
 
 <p className="text-dark font-weight-bold">Payment</p>

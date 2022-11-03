@@ -7,6 +7,7 @@ import About from "./About";
 import Products from "./Products";
 import Services from "./Services";
 import Contact from "./Contact";
+import Training from "./Training";
 import MD5q from "./MD-5q";
 import MD10q from "./MD-10q";
 import MD10h from "./MD-10h";
@@ -16,6 +17,7 @@ import ChotaBheem from "./ChotaBheem";
 import Bheem from "./Bheem";
 import FogStar from "./FogStar";
 import Gallery from "./Gallery";
+import NewsAndEvents from "./NewsAndEvents";
 
 export default function RouterApp() {
   return (
@@ -25,6 +27,7 @@ export default function RouterApp() {
     <Routes>
         <Route  path="/" element={<Home />} />
         <Route  path="/about" element={<About />} />
+        <Route  path="/training" element={<Training />} />
         <Route  path="/products" element={<Products />} />
         <Route  path="/services" element={<Services />} />
         <Route  path="/contact" element={<Contact />} />
@@ -35,7 +38,8 @@ export default function RouterApp() {
         <Route  path="/fogstar" element={<FogStar />} />
         <Route  path="/bheem" element={<Bheem />} />
         <Route  path="/chotabheem" element={<ChotaBheem />} />
-         <Route  path="/ikshana" element={<Ikshana />} />
+        <Route  path="/ikshana" element={<Ikshana />} />
+        <Route  path="/newsandevents" element={<NewsAndEvents />} />
         <Route  path="/gallery" element={<Gallery />} />
     </Routes>
     </BrowserRouter>

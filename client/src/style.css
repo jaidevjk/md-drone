@@ -1395,7 +1395,8 @@ header.header-scroll .logo-strong {
   padding: 1px 0 100px;
 }
 .s-shop {
-  padding: 1px 0 30px;
+  /* padding: 1px 0 30px; */
+  /* border: solid green 2px; */
 }
 .we-offer-bottom .block-icon,
 .s-shop .block-icon {
@@ -1404,6 +1405,10 @@ header.header-scroll .logo-strong {
 .we-offer-bottom .block-icon h6,
 .s-shop .block-icon h6 {
   font-size: 14px;
+}
+.s-shop .block-icon h6 {
+  font-size: 10px;
+  font-weight: 700;
 }
 .prod-item {
   margin-bottom: 80px;
@@ -2195,7 +2200,6 @@ footer .soc-link {
    text-transform: capitalize;
 }
 .modal-content .main{
-   text-transform: capitalize;
    text-align: justify;
 }
 .text-dark{
@@ -2462,7 +2466,7 @@ color:#212529 !important ;
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% - 40px);
-  /* height: calc(100% - 40px); */
+  height: calc(100% - 40px);
   border: 2px solid #1da912;
   transition: 0.3s ease;
   z-index: 1;
@@ -2509,7 +2513,8 @@ color:#212529 !important ;
 
 /*-------------------- S-WE-OFFER --------------------*/
 .s-we-offer {
-  padding: 50px 0 50px;
+  /* padding: 50px 0 50px; */
+  /* border: solid green 2px; */
 }
 .offer-item-img {
   margin-bottom: 20px;
@@ -3568,6 +3573,16 @@ blockquote:before {
 .footer-menu li a:hover {
   color: #1da912;
 }
+.train-banner{
+  margin-bottom: 20px;
+}
+.instructors{
+  padding: 20px;
+}
+/* .instructors-team{
+  padding: 10px;
+  padding-top: 0px;
+} */
 /* -------------------- MEDIA --------------------- */
 @media (max-width: 1700px) {
   .slide-info {
@@ -3576,8 +3591,17 @@ blockquote:before {
   .main-slider-nav {
     max-width: 650px;
   }
- 
+ .s-banners {
+    padding: 50px 0 20px;
 }
+.team-img{
+  /* padding: 20px; */
+}
+.team-item-cover .team-item{
+padding: 20px;
+}
+}
+
 @media (max-width: 1440px) {
   .main-slider-nav {
     max-width: 600px;
@@ -3595,6 +3619,9 @@ blockquote:before {
   .serv-block-item {
     height: 600px;
   }
+  .s-banners {
+    padding: 50px 0 20px;
+}
  
 }
 @media (max-width: 1365px) {
@@ -3663,7 +3690,9 @@ blockquote:before {
   .prod-tabs .item {
     margin-right: 10px;
   }
- 
+ .s-banners {
+    padding: 50px 0 20px;
+}
 }
 @media (max-width: 1279px) {
  
@@ -3730,6 +3759,9 @@ blockquote:before {
   .drone-error {
     max-width: 410px;
   }
+  .s-banners {
+    padding: 50px 0 20px;
+}
 }
 @media (max-width: 1199px) {
   
@@ -3844,14 +3876,14 @@ blockquote:before {
     padding: 0 0 20px;
   }
   .s-we-offer {
-    padding: 116px 0 100px;
+    /* padding: 116px 0 100px; */
   }
   .s-team,
   .s-blog {
     padding: 116px 0 130px;
   }
   .s-shop {
-    padding: 116px 0 50px;
+    /* padding: 116px 0 50px; */
   }
   .s-testimonials {
     padding: 116px 0 130px;
@@ -4170,6 +4202,9 @@ blockquote:before {
     transform: translateY(0);
     opacity: 1;
   }
+  .s-banners {
+    padding: 50px 0 20px;
+}
 }
 
 @media (max-width: 991px) {
@@ -4458,7 +4493,9 @@ blockquote:before {
 }
 
 @media (max-width: 767px) {
-  
+  .train-banner{
+    margin-bottom: 20px;
+  }
   .s-info-bg.s-infographics {
     padding-bottom: 80px;
   }
@@ -4483,7 +4520,7 @@ blockquote:before {
     padding-bottom: 110px;
   }
   .s-banners {
-    padding: 30px 0 96px;
+    padding: 30px 0 15px;
   }
   .new-product {
     padding: 96px 0 0;
@@ -4596,7 +4633,7 @@ blockquote:before {
     padding: 96px 0 110px;
   }
   .s-shop {
-    padding: 96px 0 30px;
+    /* padding: 96px 0 30px; */
   }
   .price-img-block {
     display: none;
@@ -4706,8 +4743,9 @@ blockquote:before {
   }
   .team-item {
     padding-top: 0;
-    margin-bottom: 50px;
-  }
+    margin-bottom: 0;
+/*    border: solid red 2px;
+*/  }
   .team-img img {
     height: 254px;
   }
@@ -4796,7 +4834,7 @@ blockquote:before {
     height: 460px;
   }
   .s-we-offer {
-    padding: 96px 0 80px;
+    /* padding: 96px 0 80px; */
   }
   .prod-item {
     margin-bottom: 80px;
@@ -4817,7 +4855,7 @@ blockquote:before {
     padding-bottom: 10px;
   }
   .s-banners {
-    padding-bottom: 70px;
+    padding-bottom: 0px;
   }
   .baner-item {
     margin-bottom: 30px;

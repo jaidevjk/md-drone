@@ -111,6 +111,7 @@ const ResponsiveAppBar = () => {
         <MenuItem className="activemenu"><li className="activeli"  ><a href="/about" >About</a></li></MenuItem>
         <MenuItem className="activemenu"><li className="activeli"><a href="/products">Products</a></li></MenuItem>
         <MenuItem className="activemenu"><li className="activeli"><a href="/services">Services</a></li></MenuItem>
+        <MenuItem className="activemenu"><li className="activeli"><a href="/training">Training</a></li></MenuItem>
         <MenuItem className="activemenu"><li className="activeli"><a href="/contact">Contact</a></li></MenuItem>
          <MenuItem><ul className="header-icon" style={{padding:"0px"}}>
                                           <li className="search icon1">
@@ -141,13 +142,14 @@ const ResponsiveAppBar = () => {
           
          
           <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' },height:"inherit",marginLeft:"10px"}}>
-                            <span style={{float:"left",width:"70%",paddingRight:"10%"}}>
+                            <span style={{float:"left",width:"70%",paddingRight:"0%"}}>
 <ul className="header-icon" ><li className="link-head">
                                       <a href="/">Home</a>
                                     </li>
                                     <li className="link-head"><a href="/about">About</a></li>
                                     <li className="link-head"><a href="/products">Products</a></li>
                                     <li className="link-head"><a href="/services">Services</a></li>
+                                    <li className="link-head"><a href="/training">Training</a></li>
                                     <li className="link-head"><a href="/contact">Contact</a></li>
             </ul></span>
              <ul className="header-icon" style={{float:"right",width:"30%"}}>
