@@ -18,6 +18,7 @@ import Bheem from "./Bheem";
 import FogStar from "./FogStar";
 import Gallery from "./Gallery";
 import NewsAndEvents from "./NewsAndEvents";
+import TrainingRegistration from "./TrainingRegistration"
 
 export default function RouterApp() {
   return (
@@ -41,6 +42,7 @@ export default function RouterApp() {
         <Route  path="/ikshana" element={<Ikshana />} />
         <Route  path="/newsandevents" element={<NewsAndEvents />} />
         <Route  path="/gallery" element={<Gallery />} />
+        <Route path="/trainingregistration" element={<TrainingRegistration />} />
     </Routes>
     </BrowserRouter>
     </>

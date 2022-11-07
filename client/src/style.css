@@ -2492,8 +2492,9 @@ color:#212529 !important ;
 .team-info .prof {
   letter-spacing: 0.07em;
   text-transform: capitalize;
-  margin-bottom: 22px;
-  color: #aaa;
+  /*margin-bottom: 22px;*/
+  color: black;
+  font-size: xx-small;
 }
 .name {
   color: #1da912;
@@ -3578,6 +3579,7 @@ blockquote:before {
 }
 .instructors{
   padding: 20px;
+  
 }
 /* .instructors-team{
   padding: 10px;
@@ -3597,8 +3599,12 @@ blockquote:before {
 .team-img{
   /* padding: 20px; */
 }
+.team-item-cover{
+  height:auto;
+}
 .team-item-cover .team-item{
 padding: 20px;
+height: max-content;
 }
 }
 
@@ -3764,7 +3770,13 @@ padding: 20px;
 }
 }
 @media (max-width: 1199px) {
-  
+  .team-info .prof {
+    letter-spacing: 0.07em;
+    text-transform: capitalize;
+    /* margin-bottom: 22px; */
+    color: black;
+    font-size: xx-small;
+}
   .about-top-cover {
     align-items: stretch;
   }
@@ -4747,7 +4759,7 @@ padding: 20px;
 /*    border: solid red 2px;
 */  }
   .team-img img {
-    height: 254px;
+    height:initial;
   }
   .s-discount-program {
     padding: 96px 0 104px;
@@ -4844,6 +4856,9 @@ padding: 20px;
   }
   .main-slider-nav {
     display: none;
+  }
+  .subscribe-form{
+    width:90%;
   }
 }
 
@@ -5121,7 +5136,24 @@ padding: 20px;
 .blok-link .support-foot{
 padding-left: 0px;
 }
-
+.content_flow {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.map1 iframe{
+  height: 300px;
+}
+.map1 {
+  margin-bottom: 10px;
+  height: 300px;
+}
+/*.team-img{
+  border: solid blue 2px;
+}
+.team-img img{
+   height: ;
+    border: solid red 2px;
+}*/
 }
 
 @media (max-width: 479px) {

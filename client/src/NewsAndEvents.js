@@ -29,42 +29,11 @@ function NewsAndEvents() {
   
  <div style={{marginTop:"0px"}}><ResponsiveAppBar /> </div> 
  <br />
- <div className="page-title" style={{backgroundImage:"url(img/bg-page.jpg)"}}>
-        <div className="container">
-            <h1 className="title">NewsAndEvents</h1>
-            <div className="breadcrumbs">
-                <ul>
-                    <li><a href="/">home</a></li>
-                    <li>NewsAndEvents</li>
-                </ul>
-            </div>
-        </div>
-    </div>                      
+                     
 <section>
 <div className="container">
-            <h2>Video</h2>
+
         </div>
-<Carousel>
-      <Carousel.Item>
-        <div className="slide-video">
-                
-            </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="slide-video">
-                
-            </div>
-      </Carousel.Item>
-      <Carousel.Item>
-              <div className="slide-video">
-                
-            </div>
-      </Carousel.Item>
-    </Carousel>
-
-
-
-
 </section>
     
 <br />
@@ -84,15 +53,27 @@ export default NewsAndEvents;
 
 
 
-// <Carousel showThumbs={false} showStatus={false}>
-//                 <div>
-//                     <img src="img/MD10H-img-1.jpg" />
+/*<Carousel showThumbs={false} showStatus={false}>
+                <div>
+                    <img src="img/MD10H-img-1.jpg" />
                     
-//                 </div>
-//                 <div>
-//                     <img src="img/MD10H-img-2.jpg" />
-//                 </div>
-//                 <div>
-//                     <img src="img/MD10H-img-1.jpg" />
-//                 </div>
-//             </Carousel>
+                </div>
+                <div>
+                    <img src="img/MD10H-img-2.jpg" />
+                </div>
+                <div>
+                    <img src="img/MD10H-img-1.jpg" />
+                </div>
+            </Carousel>
+
+<div className="page-title" style={{backgroundImage:"url(img/bg-page.jpg)"}}>
+        <div className="container">
+            <h1 className="title">NewsAndEvents</h1>
+            <div className="breadcrumbs">
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li>NewsAndEvents</li>
+                </ul>
+            </div>
+        </div>
+    </div> */ 

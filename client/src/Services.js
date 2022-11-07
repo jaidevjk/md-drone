@@ -10,13 +10,14 @@ import './style.css';
 import ResponsiveAppBar from './AppBar'; 
 import Footer from './Footer';
 import Services_Carousel from './Carousels/Services_Carousel';
+import Faqs from './Faqs/Faqs';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css'; // import first
 import { ToastContainer, toast } from 'react-toastify'; // then this
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-
+import Collapse from 'react-bootstrap/Collapse';
 
 
 function Services() {
@@ -25,6 +26,7 @@ function Services() {
   const handleClose = () => {setShow(false);setErr([])};
   const handleShow = () => setShow(true);
 
+  const [open, setOpen] = useState(false);  
       const navigate = useNavigate();
 
 const sendEnquiryDetails=async(e)=>{
@@ -113,8 +115,7 @@ const sendEnquiryDetails=async(e)=>{
             </div>
             <div className="offer-item-content" style={{textAlign:"justify"}}>
               <h4 className="title-line-left">spray</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a> ut aliquip ex ea
-                commodo consequat.</p>
+              By taking the spray service from the MDPL, farmers can save upto 30% of agricultural inputs, 90 to 95% of water and time. 
             </div>
           </div>
           <div className="col-12 col-sm-6 we-offer-item">
@@ -122,9 +123,8 @@ const sendEnquiryDetails=async(e)=>{
               <img src="img/img-serv-2.jpg" alt="img" />
             </div>
             <div className="offer-item-content" style={{textAlign:"justify"}}>
-              <h4 className="title-line-left">crop health monitoring</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a> ut aliquip ex ea
-                commodo consequat.</p>
+              <h4 className="">crop-health-monitoring</h4>
+              By taking the service of crop health monitoring from the MDPL, farmers can make a practice of precision agriculture. We can generate crop health reports, and based on the data agricultural inputs can be sprayed precisely.
             </div>
           </div>
         </div>
@@ -138,6 +138,26 @@ const sendEnquiryDetails=async(e)=>{
       </div>
     </section>
 
+
+<br /><section className="we-offer-item" >
+        
+
+      
+
+                    <div className="container">
+                        <h2 className="font-weight-normal text-7 mt-2 mb-2 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style={{animationDelay:"200ms"}}><strong className="font-weight-extra-bold">Frequently Asked Questions</strong></h2>
+                        <div className="row we-offer-cover">
+                          <div className="col-11 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                        <Faqs />
+                          </div>
+                        </div>
+                         
+                         
+                    </div>
+      
+
+
+        </section>
 
 
 

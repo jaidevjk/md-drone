@@ -269,7 +269,7 @@ const [spraysererr,setSprayserErr] =useState([]);
         
           <a href="/ikshana" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-1.jpg" alt="img" />
+            <img className="lazy" src="img/img-1.png" alt="img" />
             <div className="serv-block-info">
               <h3>Ikshana</h3>
               

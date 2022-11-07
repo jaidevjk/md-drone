@@ -93,18 +93,116 @@ Bangalore-560072</p>
               </a>
             </li>
           </ul>
-          <div className=' row map'>
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.169726426076!2d77.51469591464506!3d12.960988890862854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5e2bc26925%3A0xb5274ccd5d4d87ed!2sMultiplex%20Drone%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1666506981679!5m2!1sen!2sin"   
-              allowfullscreen="allow" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              style={{border:"solid green 1px",padding:"6px"}}
-              className='col'
-              ></iframe>
-</div> 
+           {//<div className='row map'>
+          //     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.169726426076!2d77.51469591464506!3d12.960988890862854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5e2bc26925%3A0xb5274ccd5d4d87ed!2sMultiplex%20Drone%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1666506981679!5m2!1sen!2sin"   
+          //                  allowfullscreen="allow" 
+          //                  loading="lazy" 
+          //                  referrerpolicy="no-referrer-when-downgrade"
+          //                  style={{border:"solid green 1px",padding:"6px"}}
+          //                  className='col'
+          //                  ></iframe>
+          //    </div> 
+                     }   
           </div>
           </div>
         </div>
+
+
+
+<div className="container" style={{ margin: "3rem auto",}}>
+          <div className="row" style={{padding:"0px"}}>
+            <div className="col-10 col-sm-6 col-md-5 map1" style={{}}>
+              <iframe
+                src="https://www.google.cm/maps/embed?pb=!1m18!1m12!1m3!1d3888.169726426076!2d77.51469591464506!3d12.960988890862854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5e2bc26925%3A0xb5274ccd5d4d87ed!2sMultiplex%20Drone%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1666506981679!5m2!1sen!2sin"
+                width="100%"
+                
+                 style={{border:"solid green 1px",padding:"6px"}}
+              ></iframe>
+            </div>
+
+            <div className=" col-10 col-sm-6 col-md-6 content_flow" style={{}}>
+
+              <ul className="list-group list-group-flush">
+
+                <li className="list-group-item">
+
+                 <h2 style={{color:"black",fontSize:"20px",paddingTop:"0px",}}>Head Office
+                 <h6 style={{color:"black"}}>Karnataka,Bengaluru</h6>
+                 </h2>
+                 
+                 <p className="fw-4" style={{  }}>
+                    <b>Address:</b> 1192, 4th Main Rd, 2nd Block, Govindaraja Nagar Ward, Chalukya Nagar, Vijayanagar, Bengaluru, Karnataka 560072
+                    <br />
+                    <a href="tel:080 2349 7464">
+                      <b>Phone:</b>
+                      <span> 080 2349 7464</span>
+                    </a>
+                    <br />
+                     {//<a href="mailto:kurnool@multiplexgroup.com">
+                    //                       <b>
+                    //                         Email: <span>kurnool@multiplexgroup.com</span>
+                    //                       </b>
+                    //                     </a>
+                  }
+                  </p> 
+                </li>
+              <li className="list-group-item">
+
+                 <h2 style={{color:"black",fontSize:"20px",paddingTop:"0px",}}>Branch Office
+                 <h6 style={{color:"black"}}>Mahalakshmi Layout,Bengaluru</h6>
+                 </h2>
+                 
+                 <p className="fw-4" style={{  }}>
+                    <b>Address:</b> 180, 1st A Main Rd, Mahalakshmipuram Layout, Mahalakshmi Layout, Bengaluru, Karnataka 560086
+                    <br />
+                    <a href="tel:08518 - 259460">
+                      <b>Phone:</b>
+                      <span> 08518 - 259460</span>
+                    </a>
+                    <br />
+                    {
+                      // <a href="mailto:kurnool@multiplexgroup.com">
+                      //                     <b>
+                      //                       Email: <span>kurnool@multiplexgroup.com</span>
+                      //                     </b>
+                      //                   </a>
+                                      }
+                  </p> 
+                </li>
+                <li className="list-group-item">
+
+                 <h2 style={{color:"black",fontSize:"20px",paddingTop:"0px",}}>Branch Office
+                 <h6 style={{color:"black"}}>Karnataka,Bengaluru</h6>
+                 </h2>
+                 
+                 <p className="fw-4" style={{  }}>
+                    <b>Address:</b> Plot No.1,2,3, B&S Complex, Beside SBH Bank,
+                    Gurubrahma Nagar, Bellary Road, Kurnool – 518 003
+                    <br />
+                    <a href="tel:08518 - 259460">
+                      <b>Phone:</b>
+                      <span> 08518 - 259460</span>
+                    </a>
+                    <br />
+                    {
+                      // <a href="mailto:kurnool@multiplexgroup.com">
+                      //                     <b>
+                      //                       Email: <span>kurnool@multiplexgroup.com</span>
+                      //                     </b>
+                      //                   </a>
+                                      }
+                  </p> 
+                </li>
+
+                
+              </ul>
+              </div>
+              </div>
+              </div>
+
+
+
+
     </section>
 
 <section className="s-contacts s-main-contacts" style={{}}>
@@ -158,3 +256,5 @@ export default Contact;
 
 
 
+//https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.169726426076!2d77.51469591464506!3d12.960988890862854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5e2bc26925%3A0xb5274ccd5d4d87ed!2sMultiplex%20Drone%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1666506981679!5m2!1sen!2sin
+//https://www.google.com/maps/d/u/0/embed?mid=1Sos7sKxu9K38eJmPPZHXs_psepuc4Ws&ll=12.984410629256818%2C77.532668&z=14
