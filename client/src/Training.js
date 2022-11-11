@@ -15,6 +15,8 @@ import { ToastContainer, toast } from 'react-toastify'; // then this
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Carousel from 'react-bootstrap/Carousel';
+import Testimonial from './Carousels/testimonial_carousel/Testimonial';
 
 function Training() {
 const [err,setErr] =useState([]);
@@ -278,6 +280,112 @@ const [err,setErr] =useState([]);
             </div>
             </div>
             </div>
+            <br />
+<section>
+<div className="container" style={{}}>
+<div className="row text-center pb-5" style={{backgroundColor:"#282b32"}}>
+                            <div className="col-12 mx-md-auto">
+                                <div className="overflow-hidden mb-3">
+                                    <h2 className="word-rotator slide font-weight-bold text-8 text-white mb-0">
+                                        <span>Photos</span>
+                                    </h2>
+                                </div>
+                                <div className="container">
+                                    <div className="row mx-0 justify-content-center">
+                                        <div className="col-md-6 col-lg-6">
+                                            <h4>2021 Batch</h4>
+                                            <Carousel  indicators={false} controls={false}>
+                                               <Carousel.Item interval={1000}>
+                                               <img className="lazy d-block w-100" src="img/img-1.png" alt="img" />
+                                               <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>January 2021</b></div> 
+                                               </Carousel.Item>
+                                               <Carousel.Item interval={1000}>
+                                               <img className="lazy d-block w-100" src="img/img-2.jpg" alt="img" />
+                                               <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>October 2021</b></div>
+                                                </Carousel.Item>
+                                                <Carousel.Item interval={1000}>
+                                               <img className="lazy d-block w-100" src="img/img-3.jpg" alt="img" />
+                                               <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>November 2021</b></div>
+                                               
+                                                </Carousel.Item>
+                                            </Carousel> 
+                                      </div>
+
+                                      <div className="col-md-6 col-lg-6">
+                                            <h4>2020 Batch</h4>
+                                            <Carousel fade indicators={false} controls={false}>
+                                               <Carousel.Item interval={1000}>
+                                               <img className="lazy d-block w-100" src="img/chotabheem1.png" alt="img" alt="img" />
+                                               <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>January 2020</b></div> 
+                                               </Carousel.Item>
+                                               <Carousel.Item interval={1000}>
+                                               <img className="lazy d-block w-100" src="img/img-4.jpg" alt="img" />
+                                               <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>October 2020</b></div>
+                                                </Carousel.Item>
+                                                <Carousel.Item interval={1000}>
+                                               <img className="lazy d-block w-100" src="img/bheem.png" alt="img" alt="img" />
+                                               <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>November 2020</b></div>
+                                               
+                                                </Carousel.Item>
+                                            </Carousel> 
+                                      </div>
+
+                                        
+                  
+
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+</div>
+</section>
+
+<section>
+<div className="container">
+<div className="row justify-content-center pb-0">
+                            <div className="col-12 mx-md-auto my-4">
+                                <div className="overflow-hidden mb-3">
+                                    <h2 className="word-rotator slide font-weight-bold text-8 mb-0 text-center">
+                                        <span>Our Training</span>
+                                    </h2>
+                                </div>
+                                <div className="container">
+                                    <div className="row mx-0 justify-content-center">
+                                        <div className="col-md-6 col-12 mb-2">
+                                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dFem6iSu1Qk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                        <div className="col-md-6 col-12 mb-2">
+                                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/a4vvBL0DdvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                        <div className="col-md-6 col-12 mb-2">
+                                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/DxLjcDnS0r0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                        <div className="col-md-6 col-12 mb-2">
+                                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/M-1wxB8_yYU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+</div>
+ </div>
+        </section>
+
+    <section style={{padding:"10px"}} >
+          <div className="container ">
+            <h2>testimonials</h2>
+            <Testimonial />
+          </div>
+        </section>
+ 
+
+
 <section >
         <Footer />  
         </section>

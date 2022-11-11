@@ -19,15 +19,17 @@ var enquiryRuter = require('./routes/enquirey');
 var sprayservicesenquiryRuter = require('./routes/sprayservicesenquiry');
 var contactusRuter =require('./routes/contactus');
 var subscribeRuter = require('./routes/subscription');
+var trainingregistrationRuter = require('./routes/trainingregistration');
+var catlogdownloadRuter = require('./routes/catlogdownload');
 var app = express();
 
 
 
 // Parses urlencoded bodies
-// app.use(bodyParser.json({limit: '50mb'}));
-// app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json({limit:'50mb'}));
+app.use(bodyParser.urlencoded({limit:'50mb', extended: true}));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 
 const corsOptions ={
@@ -77,9 +79,9 @@ app.use(express.static(path.join(__dirname, '/client')));
 // for connecing frontend in heroku
 app.use(express.static(path.join(__dirname, 'client','build')));
 
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
-});
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, './client/build'));
+// });
 
 //app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -89,6 +91,9 @@ app.use('/enquiry',enquiryRuter);sprayservicesenquiryRuter
 app.use('/sprayservicesenquiry',sprayservicesenquiryRuter);
 app.use('/contactusenquiry',contactusRuter);
 app.use('/subscribe',subscribeRuter);
+app.use('/trainingregistration',trainingregistrationRuter);
+app.use('/catlogdownload',catlogdownloadRuter);
+
 
 
 //For cors error-policy

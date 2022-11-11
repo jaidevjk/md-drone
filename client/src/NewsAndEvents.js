@@ -15,7 +15,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import PropTypes from 'prop-types';
 import {makeStyles} from "@material-ui/styles";
 import { ClassNames } from '@emotion/react';
-
+import {Images_Carousel,Videos_Carousel} from './Carousels/NewsAndEvents_Carousel';
 
 
 
@@ -29,13 +29,18 @@ function NewsAndEvents() {
   
  <div style={{marginTop:"0px"}}><ResponsiveAppBar /> </div> 
  <br />
-                     
+    <h2>NewsAndEvents</h2>                 
 <section>
 <div className="container">
-
+        <Images_Carousel />
+        <h2>Testimonials</h2>
+        <Videos_Carousel />
         </div>
 </section>
     
+
+
+
 <br />
 <section >
         <Footer />  

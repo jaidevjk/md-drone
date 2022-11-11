@@ -62,6 +62,54 @@ const sendEnquiryDetails=async(e)=>{
 
           }
 
+
+const downloadCatlog=async(e)=>{
+          e.preventDefault();
+          let objectOb = {
+            name: e.target.name.value,
+            contactnumber: e.target.phone.value,
+            email: e.target.email.value,
+            productname:"MD5q",
+
+          }
+           //console.log(objectOb);
+          await axios
+                .post('http://localhost:4003/catlogdownload', objectOb)
+                
+                .then((res) => {
+                  //console.log(response.data)
+                  const file = new Blob(
+                       [res.data], 
+                       {type: 'application/pdf'});
+                  const fileURL = URL.createObjectURL(file);
+                  let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'document.pdf';
+                alink.click();
+                  toast.success("Successfully Enquiry Submitted.",{position: "top-center"});
+                })
+                 //getPdf();
+                //})
+                .catch((error) => {
+                  //console.log("err",error.response.data.replace("enquiries validation failed:", "").split(",",20));
+                  console.log(error.response);
+                  //setErr(error.response.data.replace("contact validation failed:","").split(",",50));
+                  //const Err = error.response.data.replace("contact validation failed:","").replace("contactnumber","Contact Number");
+                         //console.log(Err)
+                  //toast.error({position: "top-center",});
+
+                 })
+                .finally(()=>{
+                  
+                })
+
+
+          }
+
+           
+
+
+
   
   return (
 <div>                           
@@ -353,8 +401,6 @@ const sendEnquiryDetails=async(e)=>{
         <div id="message"></div>
       </div>
     </section>
-
-
 <section >
         <Footer />  
         </section>
@@ -374,13 +420,13 @@ const sendEnquiryDetails=async(e)=>{
       <Modal.Body>
         
         
-          <form  className=""  name="contactform" >
+          <form  className=""  name="contactform" onSubmit={downloadCatlog} >
             <label>Full Name</label>
-            <input  type="text" name="yourname" placeholder="Name" style={{color:"black",padding:"5px"}} required/>         
+            <input  type="text" name="name" placeholder="Name" style={{color:"black",padding:"5px"}} required/>         
             <lable>Contact Number</lable><br/>
-            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} pattern="[0-9]{10}" required/>
+            <input type="tel" name="phone" placeholder="Phone"  style={{color:"black",padding:"5px"}} pattern="[0-9]{10}" required/>
             <lable>Email</lable><br/>
-            <input  type="email" name="youremail" placeholder="Email" style={{color:"black",padding:"5px"}} required />
+            <input  type="email" name="email" placeholder="Email" style={{color:"black",padding:"5px"}} required />
             <button className="btn"  style={{marginTop:"10px",background:"#1da912",color:"#fff"}}>Download</button>
         </form>
                          

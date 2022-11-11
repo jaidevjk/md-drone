@@ -131,12 +131,14 @@ const sendEnquiryDetails=async(e)=>{
       </div>
 </section>
 <br />
-<section className="new-product" style={{paddingTop:"0px",marginTop:"0px"}}>
-      <div className="container" style={{paddingTop:"0px",marginTop:"0px"}}>
-        <h2 style={{paddingTop:"0px",marginTop:"0px"}}>testimonials</h2>
-        <Services_Carousel />
-      </div>
-    </section>
+ {
+//<section className="new-product" style={{paddingTop:"0px",marginTop:"0px"}}>
+//     <div className="container" style={{paddingTop:"0px",marginTop:"0px"}}>
+//       <h2 style={{paddingTop:"0px",marginTop:"0px"}}>testimonials</h2>
+//       <Services_Carousel />
+//     </div>
+//   </section>
+}
 
 
 <br /><section className="we-offer-item" >

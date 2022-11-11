@@ -1526,7 +1526,7 @@ header.header-scroll .logo-strong {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: 0.3s ease-in-out;
+  /* transition: 0.3s ease-in-out; */
 }
 .prod-link-cover li:not(:last-child) {
   margin-right: 10px;
