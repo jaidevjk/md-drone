@@ -1,4 +1,4 @@
-const Iframelinks = require('../models/Iframelinks');
+const Iframelinks = require('../models/iframelinks');
 
 const createIframelinks = async(req,res)=>{
 
