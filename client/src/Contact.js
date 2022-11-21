@@ -172,12 +172,11 @@ Bangalore-560072</p>
                 <li className="list-group-item">
 
                  <h2 style={{color:"black",fontSize:"20px",paddingTop:"0px",}}>Branch Office
-                 <h6 style={{color:"black"}}>Karnataka,Bengaluru</h6>
+                 <h6 style={{color:"black"}}>Amargol Phase- II,Hubli,Karnataka</h6>
                  </h2>
                  
                  <p className="fw-4" style={{  }}>
-                    <b>Address:</b> Plot No.1,2,3, B&S Complex, Beside SBH Bank,
-                    Gurubrahma Nagar, Bellary Road, Kurnool – 518 003
+                    <b>Address:</b> No 535, MIG, KHB Colony, Amargol Phase- II, Hubli - 580025
                     <br />
                     <a href="tel:08518 - 259460">
                       <b>Phone:</b>
@@ -241,7 +240,7 @@ Bangalore-560072</p>
         href="https://wa.me/919591999044"
         target="_blank"
         rel="noopener noreferrer"
-                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
       >
                   <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />

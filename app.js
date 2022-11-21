@@ -21,6 +21,10 @@ var contactusRuter =require('./routes/contactus');
 var subscribeRuter = require('./routes/subscription');
 var trainingregistrationRuter = require('./routes/trainingregistration');
 var catlogdownloadRuter = require('./routes/catlogdownload');
+var testimonialRuter = require('./routes/testimonials');
+var newsandeventRuter = require('./routes/newsandevents');
+var iframelinkRuter = require('./routes/iframelinks');
+
 var app = express();
 
 
@@ -93,7 +97,9 @@ app.use('/contactusenquiry',contactusRuter);
 app.use('/subscribe',subscribeRuter);
 app.use('/trainingregistration',trainingregistrationRuter);
 app.use('/catlogdownload',catlogdownloadRuter);
-
+app.use('/testimonials',testimonialRuter);
+app.use('/newsandevents',newsandeventRuter);
+app.use('/iframelinks',iframelinkRuter);
 
 
 //For cors error-policy

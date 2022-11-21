@@ -73,18 +73,20 @@ const sendEnquiryDetails=async(e)=>{
           }
            //console.log(objectOb);
           await axios
-                .post('http://localhost:4003/catlogdownload', objectOb)
+                .post('http://localhost:4003/catlogdownload', objectOb,{
+                          responseType: "blob",
+                        })
                 
                 .then((res) => {
-                  //console.log(res.data)
+                  console.log(res.data)
                   const file = new Blob(
                        [res.data], 
                        {type: 'application/pdf'});
-                  //console.log(file)
+                  console.log(file)
                   const fileURL = URL.createObjectURL(file);
-                  //console.log(fileURL)
+                  console.log(fileURL)
                   let alink = document.createElement('a');
-                  //console.log(alink)
+                  console.log(alink)
                 alink.href = fileURL;
                 alink.download = 'MD10h.pdf';
                 alink.click();
@@ -96,10 +98,6 @@ const sendEnquiryDetails=async(e)=>{
                 .catch((error) => {
                   //console.log("err",error.response.data.replace("enquiries validation failed:", "").split(",",20));
                   console.log(error.response);
-                  //setErr(error.response.data.replace("contact validation failed:","").split(",",50));
-                  //const Err = error.response.data.replace("contact validation failed:","").replace("contactnumber","Contact Number");
-                         //console.log(Err)
-                  //toast.error({position: "top-center",});
 
                  })
                 .finally(()=>{
@@ -312,7 +310,7 @@ const sendEnquiryDetails=async(e)=>{
           </a>
           <a href="/md10q" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-2.jpg" alt="img" />
+            <img className="lazy" src="img/img-22.png" alt="img" />
             <div className="serv-block-info">
               <h3>md 10q</h3>
               
@@ -323,7 +321,7 @@ const sendEnquiryDetails=async(e)=>{
         <section className="serv-block" style={{margin:"20px",width:"90%"}}>
           <a href="/md16p" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-3.jpg" alt="img" />
+            <img className="lazy" src="img/img-33.png" alt="img" />
             <div className="serv-block-info">
               <h3>md 16p</h3>
               <span>read more</span>
@@ -331,7 +329,7 @@ const sendEnquiryDetails=async(e)=>{
           </a>
           <a href="/md10h" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-4.jpg" alt="img" />
+            <img className="lazy" src="img/img-44.png" alt="img" />
             <div className="serv-block-info">
               <h3>md 10h</h3>
               <span>read more</span>
@@ -345,7 +343,7 @@ const sendEnquiryDetails=async(e)=>{
         
          <a href="/ikshana" className="serv-block-item" style={{margin:"10px",width:"100%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-1.jpg" alt="img" />
+            <img className="lazy" src="img/img-ikshan.png" alt="img" />
             <div className="serv-block-info">
               <h3>ikshana</h3>
               
@@ -449,7 +447,7 @@ const sendEnquiryDetails=async(e)=>{
         href="https://wa.me/916362900041"
         target="_blank"
         rel="noopener noreferrer"
-                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
       >
                   <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />

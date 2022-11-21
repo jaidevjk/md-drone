@@ -208,7 +208,7 @@ const sendEnquiryDetails=async(e)=>{
         href="https://wa.me/919591999044"
         target="_blank"
         rel="noopener noreferrer"
-                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
       >
                   <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />

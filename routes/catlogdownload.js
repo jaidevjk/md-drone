@@ -12,7 +12,7 @@ const router = express.Router();
 router.post("/", createCatlogDownload);
 router.get("/",  fetchCatlogDownload);
 router.delete("/:id", deleteCatlogDownload);
-router.get("/download",catlogDownload);
+router.get("/download/:productname",catlogDownload);
 
 
 module.exports = router;

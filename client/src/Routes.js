@@ -18,7 +18,13 @@ import Bheem from "./Bheem";
 import FogStar from "./FogStar";
 import Gallery from "./Gallery";
 import NewsAndEvents from "./NewsAndEvents";
-import TrainingRegistration from "./TrainingRegistration"
+import TrainingRegistration from "./TrainingRegistration";
+import AdminLogin from "./Admin/AdminLogin";
+import AdminHome from "./Admin/AdminHome";
+import RegisteredUsers from "./Admin/RegisteredUsers";
+import AddTestimonials from "./Admin/AddTestimonials";
+import AddNewsAndEvents from "./Admin/AddNewsAndEvents";
+import AddYoutubeLinks from "./Admin/AddYoutubelinks";
 
 export default function RouterApp() {
   return (
@@ -43,6 +49,13 @@ export default function RouterApp() {
         <Route  path="/newsandevents" element={<NewsAndEvents />} />
         <Route  path="/gallery" element={<Gallery />} />
         <Route path="/trainingregistration" element={<TrainingRegistration />} />
+
+        <Route  path="/login" element={<AdminLogin />} />
+        <Route  path="/adminhome" element={<AdminHome />} />
+        <Route  path="/registeredusers" element={<RegisteredUsers />} />
+        <Route  path="/addtestimonials" element={<AddTestimonials />} />
+        <Route  path="/addnewsandevents" element={<AddNewsAndEvents />} />
+        <Route  path="/addyoutubelinks" element={<AddYoutubeLinks />} />
     </Routes>
     </BrowserRouter>
     </>

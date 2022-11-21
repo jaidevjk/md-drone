@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const catlogdownloadSchema = new mongoose.Schema({
-    name: { type: String, required: true, max: 100 },
+    username: { type: String, required: true},
     contactnumber: { type: Number, required: true },
     email: { type: String, required: true },
     productname:{type:String,required:true}

@@ -19,7 +19,7 @@ function About() {
   const [modalShowNMS, setModalShowNMS] = React.useState(false);
   
   return (
-<div>                           
+<div style={{margin:"0px"}}>                           
  <div style={{marginTop:"0px"}}><ResponsiveAppBar /> </div>                       
 <br />
 
@@ -117,7 +117,7 @@ function About() {
         href="https://wa.me/919591999044"
         target="_blank"
         rel="noopener noreferrer"
-                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
       >
                   <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />

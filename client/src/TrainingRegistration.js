@@ -1,4 +1,4 @@
-import React,{useState,useCallback} from 'react';
+import React,{useState,useEffect,useCallback} from 'react';
 import './App.css';
 import './bootstrap-grid.css';
 import './critical.css';
@@ -14,13 +14,32 @@ import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css'; // import first
 import { ToastContainer, toast } from 'react-toastify'; // then this
 import { useNavigate } from 'react-router-dom';
-import FileBase64 from 'react-file-base64';
 
 
 function TrainingRegistration() {
  const [file,setfile]=useState([])
- const [item, setItem] = useState();
+ const [item, setItem] = useState(null);
 
+useEffect(() => {
+    
+      window.scrollTo(0, 0);
+   
+  }, []);
+
+const encodeImageFileAsURL=(e)=> {
+    e.preventDefault();
+    
+     let file = e.target.files[0];
+    let reader = new FileReader();
+    
+    reader.onloadend = function() {
+        //console.log(typeof reader.result)
+        setItem(reader.result);
+
+    }
+    reader.readAsDataURL(file);
+    //console.log(item)
+}
 const RegisteredDetails=async(e)=>{
   e.preventDefault(0);
   let objectOb={
@@ -33,16 +52,28 @@ const RegisteredDetails=async(e)=>{
     traininglevel:e.target.training_level.value,
     passportcopy:item,
   }
+ // console.log(e.target.file1.value);
 setfile([item])
+//console.log(item)
   console.log(objectOb);
-  alert("got it");
+  // alert("got it");
   await axios
                 .post('http://localhost:4003/trainingregistration', objectOb)
                 .then((response) => {
                   
                   toast.success("Successfully Enquiry Submitted.",{position: "top-center",});
-                  console.log(response.data)
-                  setfile([response.data.passportcopy])
+                  console.log(response.data);
+                  setfile([response.data.passportcopy]);
+                    e.target.name.value = "" ;
+                    e.target.email.value = "" ;
+                    e.target.phone.value = "" ;
+                    e.target.address.value= "" ;
+                    e.target.qualification.value = "" ;
+                    e.target.passportNumber.value= "" ;
+                    e.target.training_level.value= "" ;
+                    e.target.specialization.value= "" ;
+                    e.target.file1.value = "";
+
                 })
                 .catch((error) => {
                   //console.log("err",error.response.data.replace("enquiries validation failed:", "").split(",",20));
@@ -109,13 +140,16 @@ setfile([item])
                                             <input type="text"  maxLength="100" className="form-control" name="passportNumber" id="passportnumber" required style={{color:"black",padding:"10px"}}/>
                                         </div>
                                          <div className="form-group col-sm-6 col-md-6 col-lg-6">
-                                            <label className="required font-weight-bold text-dark text-2">Upload Your Passport Copy</label>
-                                             <FileBase64
-                                              type="file"
-                                              multiple={false}
-                                              onDone={({ base64 }) => setItem(base64)}
-                                              className="input"
-                                              name="file"/>
+                                            <label className="required font-weight-bold text-dark text-2">Upload Your Passport Copy</label><br />
+                                            {
+                                                                                         // <FileBase64
+                                                                                         //  type="file"
+                                                                                         //  multiple={false}
+                                                                                         //  onDone={({ base64 }) => setItem(base64)}
+                                                                                         //  className="input"
+                                                                                         //  name="file1"/>
+                                            }
+                                              <input type="file" id ="inputFileToLoad" name="file1" onInput={encodeImageFileAsURL} />
                                         </div>
                                            
                                     </div>
@@ -125,7 +159,7 @@ setfile([item])
                                         <div className="form-group col">
                                             <label className="required font-weight-bold text-dark text-2">Training Level</label>
                                             <select className="form-control" name="training_level" id="training_level" required>
-                                                <option >Select a Training Level</option>
+                                                <option disabled selected>Select a Training Level</option>
                                                 <option value="Small Category Multirotor Drone Pilot Course"> Small Category Multirotor Drone Pilot Course </option>
                                                 <option value="Agriculture Drone Pilot Course"> Agriculture drone pilot course </option>
                                             </select>
@@ -164,9 +198,11 @@ setfile([item])
                 </div>
             </div>
         {
-        //   file.map((val,key)=><div><img src={val} /></div>)
+          // file.map((val,key)=><div><img src={val} /></div>)
          }
 
+ <div id="dummy">
+    </div>
 
     
      <Footer />

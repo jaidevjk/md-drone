@@ -21,12 +21,18 @@ import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+import ScrollToTop from "react-scroll-to-top";
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <ScrollToTop id="scrol-up" smooth component={<i className="bi bi-chevron-double-up" style={{}}></i>} style={{borderRadius:"0px",boxShadow:"none",position:"fixed",bottom:"10px",right:"15px",backgroundColor:"#404040"}} />
+
     <App />
   </React.StrictMode>
 );

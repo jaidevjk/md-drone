@@ -10,18 +10,16 @@ import './style.css';
 import Collapse from 'react-bootstrap/Collapse';
 import ResponsiveAppBar from './AppBar'; 
 import Footer from './Footer';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Carousel } from 'react-responsive-carousel';
+
 import Testimonial from './Carousels/testimonial_carousel/Testimonial';
 // import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import 'react-toastify/dist/ReactToastify.css'; // import first
-import { ToastContainer, toast } from 'react-toastify'; // then this
+import 'react-toastify/dist/ReactToastify.css'; 
+import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
- 
 
   const style = {
 };
@@ -39,10 +37,13 @@ function Home() {
 const [spraysererr,setSprayserErr] =useState([]);
   const [showspray, setShowspray] = useState(false);
   const handleClosespray = () => {setShowspray(false);setSprayserErr([])};
+
   const handleShowspray = () => setShow(true);
 
   const navigate = useNavigate();
 
+
+  
           const sendSprayServicesDetails=async(e)=>{
           e.preventDefault();
           let objectOb = {
@@ -108,12 +109,15 @@ const [spraysererr,setSprayserErr] =useState([]);
 
 
           }
-
+ 
 
 
   return (
 <div className="" style={{margin:"0px"}}>                           
- <div style={{marginTop:"0px"}}><ResponsiveAppBar /> </div>                       
+ <div style={{marginTop:"0px"}}><ResponsiveAppBar /> </div> 
+
+
+
   <div className="col-12" style={{padding:"10px"}} >
       <div style={{}}>
    
@@ -239,7 +243,7 @@ const [spraysererr,setSprayserErr] =useState([]);
           </a>
           <a href="/md10q" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-2.jpg" alt="img" />
+            <img className="lazy" src="img/img-22.png" alt="img" />
             <div className="serv-block-info">
               <h3>md 10q</h3>
               
@@ -248,7 +252,7 @@ const [spraysererr,setSprayserErr] =useState([]);
           </a>
           <a href="/md16p" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-3.jpg" alt="img" />
+            <img className="lazy" src="img/img-33.png" alt="img" />
             <div className="serv-block-info">
               <h3>md 16p</h3>
               <span>read more</span>
@@ -256,7 +260,7 @@ const [spraysererr,setSprayserErr] =useState([]);
           </a>
           <a href="/md10h" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-4.jpg" alt="img" />
+            <img className="lazy" src="img/img-44.png" alt="img" />
             <div className="serv-block-info">
               <h3>md 10h</h3>
               <span>read more</span>
@@ -269,7 +273,7 @@ const [spraysererr,setSprayserErr] =useState([]);
         
           <a href="/ikshana" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/img-1.png" alt="img" />
+            <img className="lazy" src="img/img-ikshan.png" alt="img" />
             <div className="serv-block-info">
               <h3>Ikshana</h3>
               
@@ -278,7 +282,7 @@ const [spraysererr,setSprayserErr] =useState([]);
           </a>
           <a href="/chotabheem" className="serv-block-item" style={{margin:"10px",width:"150%",height:"90%"}}>
             <span className="border-item"></span>
-            <img className="lazy" src="img/chotabheem.png" alt="img" />
+            <img className="lazy" src="img/chotabheem1.png" alt="img" />
             <div className="serv-block-info">
               <h3>ChotaBheem</h3>
               
@@ -355,6 +359,8 @@ const [spraysererr,setSprayserErr] =useState([]);
           </div>
         </section>
 <br /><br /><br />
+
+
 
 <section >
           <Footer />
@@ -435,12 +441,13 @@ const [spraysererr,setSprayserErr] =useState([]);
         href="https://wa.me/919591999044"
         target="_blank"
         rel="noopener noreferrer"
-                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
       >
                   <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
 
-      </a>               
+      </a>    
+
 </div>
   );
 }

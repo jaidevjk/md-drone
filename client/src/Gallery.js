@@ -10,8 +10,7 @@ import './style.css';
 import ResponsiveAppBar from './AppBar'; 
 import Footer from './Footer';
 import Carousel from 'react-bootstrap/Carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
+
 import PropTypes from 'prop-types';
 import {makeStyles} from "@material-ui/styles";
 import { ClassNames } from '@emotion/react';

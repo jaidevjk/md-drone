@@ -45,13 +45,23 @@ exports.createTrainingRegistration = async (req, res) => {
 };
 
 exports.fetchTrainingRegistration = async (req, res) => {
-  const TrainingRegistration = await TrainingRegistration.find();
-  try {
-    res.status(200).send(TrainingRegistration);
-  } catch (error) {
-    console.log(error);
-    res.status(409).send("Some thing went wrong in fetching TrainingRegistration");
-  }
+  // const TrainingRegistration = await TrainingRegistration.find();
+  // try {
+  //   res.status(200).send(TrainingRegistration);
+  // } catch (error) {
+  //   console.log(error);
+  //   res.status(409).send("Some thing went wrong in fetching TrainingRegistration");
+  // }
+  TrainingRegistration.find(function(err, users_list) {
+        if(err){
+            res.json(err);
+        } else {
+            // console.log("one:",users_list);
+            res.json({status: 1, data: users_list});
+
+        }
+    })
+  
 };
 
 exports.deleteTrainingRegistration = async (req, res) => {

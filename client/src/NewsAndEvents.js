@@ -10,8 +10,6 @@ import './style.css';
 import ResponsiveAppBar from './AppBar'; 
 import Footer from './Footer';
 import Carousel from 'react-bootstrap/Carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
 import PropTypes from 'prop-types';
 import {makeStyles} from "@material-ui/styles";
 import { ClassNames } from '@emotion/react';
@@ -33,7 +31,7 @@ function NewsAndEvents() {
 <section>
 <div className="container">
         <Images_Carousel />
-        <h2>Testimonials</h2>
+        <h2 >Testimonials</h2>
         <Videos_Carousel />
         </div>
 </section>
@@ -47,7 +45,16 @@ function NewsAndEvents() {
         </section>
 
 
+ <a
+        href="https://wa.me/919591999044"
+        target="_blank"
+        rel="noopener noreferrer"
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
+      >
+                  <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
+
+      </a>  
 
 
 </div>

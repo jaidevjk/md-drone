@@ -197,74 +197,152 @@ const [err,setErr] =useState([]);
  {
 //         <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
 }
-        <div className="row">
-          <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
-            <div className="team-item instructors-team">
-              <div className="team-img">
-                <img src="img/team-1.jpg" alt="" />
-              </div>
-              <div className="team-info">
-                <h6 className="name">Maj Gen RC Padhi</h6>
-                <div className="prof">Defence Mentor IID & Ex-Military Surveyor General</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
-            <div className="team-item instructors-team">
-              <div className="team-img">
-                <img src="img/team-1.jpg" alt="" />
-              </div>
-              <div className="team-info">
-                <h6 className="name">Ram Sarath Kumar</h6>
-                <div className="prof">Chief Operations Officer, IID</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
-            <div className="team-item instructors-team">
-              <div className="team-img">
-                <img src="img/team-1.jpg" alt="" />
-              </div>
-              <div className="team-info">
-                <h6 className="name">MS Prasad</h6>
-                <div className="prof">Chief Patron IID & Ex DRDO Scientist G</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
-            <div className="team-item instructors-team">
-              <div className="team-img">
-                <img src="img/team-1.jpg" alt="" />
-              </div>
-              <div className="team-info">
-                <h6 className="name">Cyril Christopher</h6>
-                <div className="prof">Sr Research & Development Engineer - Aeronautics</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
-            <div className="team-item instructors-team">
-              <div className="team-img">
-                <img src="img/team-1.jpg" alt="" />
-              </div>
-              <div className="team-info">
-                <h6 className="name">Lt Cdr John Livingstone</h6>
-                <div className="prof">Executive Director IID & Ex-Military UAV Pilot</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
-            <div className="team-item instructors-team">
-              <div className="team-img">
-                <img src="img/ShivakumarHG1.jpg"  alt="" height="inherit" alt=""style={{width:"100%",height: "inherit"}}/>
-              </div>
-              <div className="team-info">
-                <h6 className="name">Shivakumar H G</h6>
-                <div className="prof">Head (Operations &Technical) of MDPL & IID Certified Multirotor Drone Instructor</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        { 
+        //          <div className="row">
+       //           <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+       //             <div className="team-item instructors-team">
+       //               <div className="team-img">
+       //                 <img src="img/team-1.jpg" alt="" />
+       //               </div>
+       //               <div className="team-info">
+       //                 <h6 className="name">Maj Gen RC Padhi</h6>
+       //                 <div className="prof">Defence Mentor IID & Ex-Military Surveyor General</div>
+       //               </div>
+       //             </div>
+       //           </div>
+       //           <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+       //             <div className="team-item instructors-team">
+       //               <div className="team-img">
+       //                 <img src="img/team-1.jpg" alt="" />
+       //               </div>
+       //               <div className="team-info">
+       //                 <h6 className="name">Ram Sarath Kumar</h6>
+       //                 <div className="prof">Chief Operations Officer, IID</div>
+       //               </div>
+       //             </div>
+       //           </div>
+       //           <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+       //             <div className="team-item instructors-team">
+       //               <div className="team-img">
+       //                 <img src="img/team-1.jpg" alt="" />
+       //               </div>
+       //               <div className="team-info">
+       //                 <h6 className="name">MS Prasad</h6>
+       //                 <div className="prof">Chief Patron IID & Ex DRDO Scientist G</div>
+       //               </div>
+       //             </div>
+       //           </div>
+       //           <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+       //             <div className="team-item instructors-team">
+       //               <div className="team-img">
+       //                 <img src="img/team-1.jpg" alt="" />
+       //               </div>
+       //               <div className="team-info">
+       //                 <h6 className="name">Cyril Christopher</h6>
+       //                 <div className="prof">Sr Research & Development Engineer - Aeronautics</div>
+       //               </div>
+       //             </div>
+       //           </div>
+       //           <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+       //             <div className="team-item instructors-team">
+       //               <div className="team-img">
+       //                 <img src="img/team-1.jpg" alt="" />
+       //               </div>
+       //               <div className="team-info">
+       //                 <h6 className="name">Lt Cdr John Livingstone</h6>
+       //                 <div className="prof">Executive Director IID & Ex-Military UAV Pilot</div>
+       //               </div>
+       //             </div>
+       //           </div>
+       //           <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+       //             <div className="team-item instructors-team">
+       //               <div className="team-img">
+       //                 <img src="img/ShivakumarHG1.jpg"  alt="" height="inherit" alt=""style={{width:"100%",height: "inherit"}}/>
+       //               </div>
+       //               <div className="team-info">
+       //                 <h6 className="name">Shivakumar H G</h6>
+       //                 <div className="prof">Head (Operations &Technical) of MDPL & IID Certified Multirotor Drone Instructor</div>
+       //               </div>
+       //             </div>
+       //           </div>
+       //         </div>
+        }
+
+
+
+
+ <div className="row">
+                 <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+                   <div className="team-item instructors-team">
+                     <div className="team-img">
+                       <img src="img/AdityaAR.png" alt="" />
+                     </div>
+                     <div className="team-info">
+                       <h6 className="name">Adithya AR</h6>
+                       <div className="prof">Asst. Manager – Operations </div>
+                     </div>
+                   </div>
+                 </div>
+                 <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+                   <div className="team-item instructors-team">
+                     <div className="team-img">
+                       <img src="img/AnupKumar.jpg" alt="" />
+                     </div>
+                     <div className="team-info">
+                       <h6 className="name">Anup Kumar Yemme</h6>
+                       <div className="prof">Asst. Manager – Product Development</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+                   <div className="team-item instructors-team">
+                     <div className="team-img">
+                       <img src="img/Mithun.jpg" alt="" />
+                     </div>
+                     <div className="team-info">
+                       <h6 className="name">Mithun SK</h6>
+                       <div className="prof">Manager – NPD Certified Trainer</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+                   <div className="team-item instructors-team">
+                     <div className="team-img">
+                       <img src="img/team-1.jpg" alt="" />
+                     </div>
+                     <div className="team-info">
+                       <h6 className="name">Cyril Christopher</h6>
+                       <div className="prof">Sr Research & Development Engineer - Aeronautics</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+                   <div className="team-item instructors-team">
+                     <div className="team-img">
+                       <img src="img/team-1.jpg" alt="" />
+                     </div>
+                     <div className="team-info">
+                       <h6 className="name">Lt Cdr John Livingstone</h6>
+                       <div className="prof">Executive Director IID & Ex-Military UAV Pilot</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div className="col-8 col-sm-6 col-md-4 col-xl-2 team-item-cover instructors">
+                   <div className="team-item instructors-team">
+                     <div className="team-img">
+                       <img src="img/ShivakumarHG1.jpg"  alt="" height="inherit" alt=""style={{width:"100%",height: "inherit"}}/>
+                     </div>
+                     <div className="team-info">
+                       <h6 className="name">Shivakumar H G</h6>
+                       <div className="prof">Head (Operations &Technical) of MDPL & IID Certified Multirotor Drone Instructor</div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+
+
+
       </div>
     </section>
     <div className="container" style={{}}>
@@ -281,18 +359,88 @@ const [err,setErr] =useState([]);
             </div>
             </div>
             <br />
-<section>
+ {
+            //<section>
+// <div className="container" style={{}}>
+// <div className="row text-center pb-5" style={{backgroundColor:"#282b32",padding:"10px",border:"solid green 3px"}}>
+//                             <div className="col-12 mx-md-auto">
+//                                 <div className="overflow-hidden mb-3">
+//                                     <h2 className="word-rotator slide font-weight-bold text-8 text-white mb-0">
+//                                         <span>Photos</span>
+//                                     </h2>
+//                                 </div>
+                                
+//                                     <div className="row mx-0 justify-content-center">
+//                                         <div className="col-md-6 col-lg-6">
+//                                             <h4>2021 Batch</h4>
+//                                             <Carousel  indicators={false} controls={false}>
+//                                                <Carousel.Item interval={1000}>
+//                                                <img className="lazy d-block w-100" src="img/img-1.png" alt="img" />
+//                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>January 2021</b></div> 
+//                                                </Carousel.Item>
+//                                                <Carousel.Item interval={1000}>
+//                                                <img className="lazy d-block w-100" src="img/img-22.png" alt="img" />
+//                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>October 2021</b></div>
+//                                                 </Carousel.Item>
+//                                                 <Carousel.Item interval={1000}>
+//                                                <img className="lazy d-block w-100" src="img/img-33.png" alt="img" />
+//                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>November 2021</b></div>
+                                               
+//                                                 </Carousel.Item>
+//                                             </Carousel> 
+//                                       </div>
+
+//                                       <div className="col-md-6 col-lg-6">
+//                                             <h4>2020 Batch</h4>
+//                                             <Carousel fade indicators={false} controls={false}>
+//                                                <Carousel.Item interval={1000}>
+//                                                <img className="lazy d-block w-100" src="img/chotabheem1.png" alt="img" alt="img" />
+//                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>January 2020</b></div> 
+//                                                </Carousel.Item>
+//                                                <Carousel.Item interval={1000}>
+//                                                <img className="lazy d-block w-100" src="img/img-44.png" alt="img" />
+//                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>October 2020</b></div>
+//                                                 </Carousel.Item>
+//                                                 <Carousel.Item interval={1000}>
+//                                                <img className="lazy d-block w-100" src="img/bheem.png" alt="img" alt="img" />
+//                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>November 2020</b></div>
+                                               
+//                                                 </Carousel.Item>
+//                                             </Carousel> 
+//                                       </div>
+
+                                        
+                  
+
+
+                                        
+//                                     </div>
+                                
+//                             </div>
+//                         </div>
+
+
+
+
+// </div>
+// </section>
+}
+
+
+
+            <section>
 <div className="container" style={{}}>
-<div className="row text-center pb-5" style={{backgroundColor:"#282b32"}}>
-                            <div className="col-12 mx-md-auto">
+<div style={{padding:"10px",paddingLeft:"5px",border:"solid green 2px"}}>
+<div className="row text-center pb-5" style={{backgroundColor:"#282b32",marginRight:"5px",marginLeft:"5px"}}>
+                            <div className="col-12">
                                 <div className="overflow-hidden mb-3">
                                     <h2 className="word-rotator slide font-weight-bold text-8 text-white mb-0">
                                         <span>Photos</span>
                                     </h2>
                                 </div>
-                                <div className="container">
-                                    <div className="row mx-0 justify-content-center">
-                                        <div className="col-md-6 col-lg-6">
+                                </div>
+                                    
+                                        <div className="col-md-5 col-lg-5">
                                             <h4>2021 Batch</h4>
                                             <Carousel  indicators={false} controls={false}>
                                                <Carousel.Item interval={1000}>
@@ -300,18 +448,18 @@ const [err,setErr] =useState([]);
                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>January 2021</b></div> 
                                                </Carousel.Item>
                                                <Carousel.Item interval={1000}>
-                                               <img className="lazy d-block w-100" src="img/img-2.jpg" alt="img" />
+                                               <img className="lazy d-block w-100" src="img/img-22.png" alt="img" />
                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>October 2021</b></div>
                                                 </Carousel.Item>
                                                 <Carousel.Item interval={1000}>
-                                               <img className="lazy d-block w-100" src="img/img-3.jpg" alt="img" />
+                                               <img className="lazy d-block w-100" src="img/img-33.png" alt="img" />
                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>November 2021</b></div>
                                                
                                                 </Carousel.Item>
                                             </Carousel> 
                                       </div>
 
-                                      <div className="col-md-6 col-lg-6">
+                                      <div className="col-md-5 col-lg-5">
                                             <h4>2020 Batch</h4>
                                             <Carousel fade indicators={false} controls={false}>
                                                <Carousel.Item interval={1000}>
@@ -319,7 +467,7 @@ const [err,setErr] =useState([]);
                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>January 2020</b></div> 
                                                </Carousel.Item>
                                                <Carousel.Item interval={1000}>
-                                               <img className="lazy d-block w-100" src="img/img-4.jpg" alt="img" />
+                                               <img className="lazy d-block w-100" src="img/img-44.png" alt="img" />
                                                <div className="text-dark text-4 bg-light" style={{position: "absolute", bottom: "0px",  width: "100%"}}><b>October 2020</b></div>
                                                 </Carousel.Item>
                                                 <Carousel.Item interval={1000}>
@@ -330,21 +478,17 @@ const [err,setErr] =useState([]);
                                             </Carousel> 
                                       </div>
 
-                                        
-                  
-
-
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
 
-
+</div>
 
 
 </div>
 </section>
+
+
+
 
 <section>
 <div className="container">
@@ -396,7 +540,7 @@ const [err,setErr] =useState([]);
         href="https://wa.me/916362900041"
         target="_blank"
         rel="noopener noreferrer"
-                  style={{ position: "fixed", bottom: 20, right: 30, zIndex: 1000 }}
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
       >
                   <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />

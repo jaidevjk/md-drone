@@ -22,9 +22,9 @@ function Faqs() {
 
   return (
     <>
-      <div className="card card-faq mt-1" style={{padding:"0px",borderRadius:"0px"}}>
+      <div className="card card-faq mt-1" style={{padding:"0px",borderRadius:"0px",}}>
             
-                           <div className="card-header question" onClick={() => setOpenOne(!openOne)} style={{borderRadius:"0px"}}>
+                           <div className="card-header question" onClick={() => setOpenOne(!openOne)} style={{}}>
                              <div>1. On which crops I can use drones for aerial spraying?</div>
                            </div>
                           <Collapse  in={openOne} style={{}}>
