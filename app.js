@@ -126,14 +126,14 @@ if (process.env.NODE_ENV === "production") {
   // Express will serve up the index.html file
   // if it doesn't recognize the route
   const path = require("path");
-  app.get("/", (req, res) => {
+  app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 
-const PORT = process.env.PORT || 4003;
+//const PORT = process.env.PORT || 4003;
 
-app.listen(PORT,()=>console.log("connected to server"));
+//app.listen(PORT,()=>console.log("connected to server"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
