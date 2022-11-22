@@ -113,7 +113,7 @@ app.disable('etag');
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
-app.use(routes);
+//app.use(routes);
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
