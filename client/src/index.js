@@ -24,14 +24,14 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import ScrollToTop from "react-scroll-to-top";
-
+import { BsChevronDoubleUp } from "react-icons/bs";
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <ScrollToTop id="scrol-up" smooth component={<i className="bi bi-chevron-double-up" style={{}}></i>} style={{borderRadius:"0px",boxShadow:"none",position:"fixed",bottom:"10px",right:"15px",backgroundColor:"#404040"}} />
+  <ScrollToTop id="scrol-up" smooth component={<BsChevronDoubleUp size="20px"/>} style={{borderRadius:"0px",boxShadow:"none",position:"fixed",bottom:"10px",right:"15px",backgroundColor:"#404040"}} />
 
     <App />
   </React.StrictMode>
@@ -41,3 +41,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+//<i className="bi bi-chevron-double-up" style={{}}></i>
