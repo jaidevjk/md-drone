@@ -78,10 +78,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, '/client')));
+/*app.use(express.static(path.join(__dirname, '/client')));
 
 // for connecing frontend in heroku
-app.use(express.static(path.join(__dirname, 'client','build')));
+app.use(express.static(path.join(__dirname, 'client','build')));*/
 
 // app.get('*', function (req, res) {
 //   res.sendFile(path.join(__dirname, './client/build'));
@@ -109,14 +109,27 @@ app.use(cors({
 
 app.disable('etag');
 
-// for heroku deployment
+// // for heroku deployment
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/public"));
+// }
+// //app.use(routes);
+// app.get("*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "./client/public/index.html"));
+// });
+
+app.use(express.static(__dirname + "/client"));
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/public"));
+  // Express will serve up production assets
+  // lik our main.js file or main.css file
+  app.use(express.static("client/build"));
+  // Express will serve up the index.html file
+  // if it doesn't recognize the route
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
 }
-//app.use(routes);
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/public/index.html"));
-});
 
 
 // catch 404 and forward to error handler

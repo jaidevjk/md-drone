@@ -251,7 +251,9 @@
     "start": "nodemon ./bin/www",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run client\" \"npm start\"",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
