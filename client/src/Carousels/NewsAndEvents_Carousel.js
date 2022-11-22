@@ -196,49 +196,57 @@ const Images_Carousel = () => {
     
     
     >
-{
-        userData.map((val,index)=>{
-            console.log(val.eventdate)
-          let eventDay= val.eventdate.split('/')[1] ;
-          let eventYear = val.eventdate.split('/')[2] ;
+ {
+//         userData.map((val,index)=>{
+//             console.log(val.eventdate)
+//           // let eventDay= val.eventdate.split('/')[1] ;
+//           // let eventYear = val.eventdate.split('/')[2] ;
 
-          let eventMonth = val.eventdate.split('/')[0] ;
-          var month = ['January', 'February', 'March',
-             'April', 'May', 'June', 'July',
-             'August', 'September', 'October',
-             'November', 'December'
-            ][eventMonth-1].slice(0,3) || ''; //.slice(0,3)
-           console.log(month);
-            return(
+//           // let eventMonth = val.eventdate.split('/')[0] ;
+//           // var month = ['January', 'February', 'March',
+//           //    'April', 'May', 'June', 'July',
+//           //    'August', 'September', 'October',
+//           //    'November', 'December'
+//           //   ][eventMonth-1].slice(0,3) || ''; //.slice(0,3)
+//           //  console.log(month);
+//             return(
           
-<div className="slider-new-product" style={{margin:"0px",marginTop:"0px",width:"100%",height:"100%",}}>
-              <div className="slide-new-product" style={{margin:"0px",padding:"0px",}}>
-                <div className="prod-item new" style={{margin:"0px",padding:"0px",}}>
-                  <div className="prod-thumbnail" style={{margin:"0px",padding:"0px",}}>
-                    <div className="prod-img" style={{margin:"0px",padding:"0px",}}>
-                      <img src={val.img} alt="img"  height="100%" style={{padding:"10px",backgroundColor:"#fff"}}/>
+     
+                <div className="slider-new-product" style={{margin:"0px",marginTop:"0px",width:"100%",height:"100%",}}>
+                      <div className="slide-new-product" style={{margin:"0px",padding:"0px",}}>
+                        <div className="prod-item new" style={{margin:"0px",padding:"0px",}}>
+                          <div className="prod-thumbnail" style={{margin:"0px",padding:"0px",}}>
+                            <div className="prod-img" style={{margin:"0px",padding:"0px",}}>
+                              <img src="img/blog-img-1.jpg" alt="img"  height="100%" style={{padding:"10px",backgroundColor:"#fff"}}/>
                       
-                    </div>
+                            </div>
                      
-                  </div>
-                </div>
-            </div>
-            <div className="row" style={{height:"auto",width:"100%",paddingLeft:"10px",paddingTop:"10px",backgroundColor:"#efefef"}}>
-                                    <div className="post-date col-2" style={{paddingTop:"5px",color:"white",backgroundColor:"#1da912",height:"90px",fontWeight:"450",textAlign:"center"}}>
-                                        <div className="day" style={{padding:"0px 1px",textAlign:"left"}}>{eventDay}</div>
+                          </div>
+                        </div>
+                    </div>
+                    <div className="row" style={{height:"auto",width:"100%",paddingLeft:"10px",paddingTop:"10px",backgroundColor:"#efefef"}}>
+                                            <div className="post-date col-2" style={{paddingTop:"5px",color:"white",backgroundColor:"#1da912",height:"90px",fontWeight:"450",textAlign:"center"}}>
+                                                <div className="day" style={{padding:"0px 1px",textAlign:"left"}}>eventDay</div>
     
-                                        <div className="month" style={{padding:" 0px 1px",textAlign:"left"}}>{month}</div>
-                                         <div className="month" style={{padding:" 0px 1px",textAlign:"left"}}>{eventYear}</div>
-                                    </div>
+                                                <div className="month" style={{padding:" 0px 1px",textAlign:"left"}}>month</div>
+                                                 <div className="month" style={{padding:" 0px 1px",textAlign:"left"}}>eventYear</div>
+                                            </div>
     
-                                    <div className="post-content col-9" style={{textAlign:"justify"}}>
-                                        <span style={{textAlign:"justify",color:"black"}} className="">{val.description}</span>
-                                    </div>
-                              </div> 
-            </div>
+                                            <div className="post-content col-9" style={{textAlign:"justify"}}>
+                                                <span style={{textAlign:"justify",color:"black"}} className="">val.description</span>
+                                            </div>
+                                      </div> 
+                    </div>
+        
 
- );
-        })
+
+
+
+
+
+
+ // );
+ //        })
 
         }
 
