@@ -131,6 +131,9 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+const PORT = process.env.PORT || 4003;
+
+app.listen(PORT);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
