@@ -19,7 +19,7 @@ function About() {
   const [modalShowNMS, setModalShowNMS] = React.useState(false);
   
   return (
-<div>                           
+<div style={{margin:"0px"}}>                           
  <div style={{marginTop:"0px"}}><ResponsiveAppBar /> </div>                       
 <br />
 
@@ -27,7 +27,7 @@ function About() {
       <div className="container">
         <div className="row about-top-cover" style={{textAlign:" justify",paddingTop:"0px",paddingBottom:"0px"}}>
           <div className="col-10 ">
-            <img src="img/img-about-top.jpg" alt="img"   style={{width:"inherit",height:"inherit",padding: "5px"}} className="" />
+            <img src="img/img-about-top.jpg" alt="img"   style={{width:"100%", height:"inherit",padding: "5px"}} className="" />
           </div>
           <div className="col-10 about-info">
             <h2 className="title-left">Who We Are</h2>
@@ -49,17 +49,13 @@ function About() {
       <div className="container">
         <div className="visiontitle">
           <p style={{color: "#1da912"}}>OUR VISION</p>
-          <br />
           <img src="img/vision.svg" alt="img" />
         </div>
         <div className="visioninfo">
           <p>Our purpose is to provide drone technology and training for farmer’s community</p>
         </div>
-        <br />
-        <br />
         <div className="visiontitle">
           <p style={{color: "#1da912",textAlign: "center"}}>OUR MISSION</p>
-          <br />
           <img src="img/mission.svg" alt="img" />
         </div>
         <div className="visioninfo">
@@ -72,15 +68,15 @@ function About() {
 <section className="" style={{ width:"inherit",height: "inherit",padding:"0px",margin:"0px",textAlign: "center"}}>
       <div className="" style={{padding:"0px",textAlign:"justify-all"}}>
         <h2>our management</h2>
-        <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+        {/* <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p> */}
         <div className="row" style={{display:"flex",padding:"0px",margin:"0px 0px",height: "inherit",width:"inherit"}}>
 
           <div className="col-sm-10 col-md-3 col-xl-3 col-lg-3 col-xs-5 pointer" style={{padding:"10px",margin:"inherit",width:"inherit",height: "inherit",cursor:"pointer"}} onClick={() => setModalShowMGS(true)}>
             <div style={{width:"inherit"}} id="myBtn1">
-              <img src="img/MGS.jpg" height="inherit" alt=""style={{width:"100%",height: "inherit",}} />
+              <img src="img/MGS.jpg" height="inherit" alt=""style={{width:"80%",height: "inherit",}} />
             </div>
             <div className="team-info">
-              <h6 style={{color: "#282b32"}} className=" name"> Mr. Mahesh G Shetty </h6>
+              <h5 style={{color: "#1da912", paddingTop: "10px"}} className=" name"> Mr. Mahesh G Shetty </h5>
               <div style={{color: "#282b32"}} className=" prof">Managing Director</div>
             </div>
           </div>
@@ -88,11 +84,11 @@ function About() {
 
           <div className="col-sm-10 col-md-3 col-xl-3 col-lg-3 col-xs-5 pointer" style={{padding:"10px",margin:"inherit",width:"inherit",height: "inherit",cursor:"pointer"}} onClick={() => setModalShowNMS(true)}>
             <div style={{width:"inherit"}} id="myBtn1">
-              <img src="img/NMS.jpg" height="inherit" alt=""style={{width:"100%",height: "inherit"}} />
+              <img src="img/NMS.jpg" height="inherit" alt=""style={{width:"80%",height: "inherit"}} />
             </div>
             <div className="team-info">
-              <h6 style={{color: "#282b32"}} className=" name"> Mrs. Nishchita M Shetty </h6>
-              <div style={{color: "#282b32"}} className=" prof">Managing Director</div>
+              <h5 style={{color: "#1da912", paddingTop: "10px"}} className=" name"> Mrs. Nishchita M Shetty </h5>
+              <div style={{color: "#282b32"}} className=" prof">Director</div>
             </div>
           </div>
 
@@ -117,7 +113,16 @@ function About() {
 
 
 
+<a
+        href="https://wa.me/919591999044"
+        target="_blank"
+        rel="noopener noreferrer"
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
+      >
+                  <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
+
+      </a>
 
 </div>
   );
@@ -133,7 +138,7 @@ function MGSCenteredModal(props) {
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
-      centered
+      style={{paddingTop:'10px',backgroundColor:"#282b32"}}
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -141,31 +146,22 @@ function MGSCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
         <p>
-          Today with over 25 years of experience in the field of
-              Agricultural Industry and under the continued guidance of his
-              father, Mr. Mahesh G. Shetty has played a crucial role in
-              bringing up the facility into an organization of status,
-              deeply embedded in production and marketing of micronutrients,
-              speciality fertilizers, organic manure, Bio-Fertilizer and
-              Bio-Pesticides, Bio-Activators & Pesticides across India.
+          Mr. Mahesh G. Shetty is the “Managing Director of Multiplex Drone Private Limited”,
+             President of “Indian micro fertilizers manufacturers association” & 
+             also the “Managing Director of Multiplex Group of Companies” who are pioneers in Agribusiness in India since 1974.
+              With over 25 years of experience in the field of agronomy,
+              Mr. Mahesh G. Shetty has played a crucial role in bringing up the facility into an organization of status,
+             deeply embedded in production and marketing of micronutrients, especially fertilizers, organic manure, Bio-Fertilizer, Bio-Pesticides, Bio-Activators & Pesticides across India.
               <br />
               <br />
-              Since 2009, under his leadership we spread our arms to global
-              relations for Djibouti &, Ethiopia. Owing to the tenacious
-              aspirations and efforts of Mr. Mahesh G. Shetty has been an
-              Honorary Consultant of the Republic of Djibouti.
+              Recognizing his contribution, the “International Competence Centre for Organic Agriculture (ICCOA)” has awarded Mr. Mahesh G. Shetty the title of “Young Industrial Entrepreneur” & under his authority, 
+              the “Multiplex Group” has received the “Fertilizer Association of India (FAI) award” for “Production, Promotion, and Marketing of Bio Fertilizers”.
               <br />
               <br />
-              Recognizing his contribution, the “International Competence
-              Centre for Organic Agriculture (ICCOA)” has awarded Mr. Mahesh
-              G. Shetty the title of “Young Industrial Entrepreneur”. Also,
-              under his authority, the Multiplex Group has received the
-              Fertilizer Association of India (FAI) award for “Production,
-              Promotion, and Marketing of Bio Fertilizers”. Also, he had
-              been nominated as the President of “Indian micro fertilizers
-              manufacturers association”.
+              On 27th January 2018, a destructive article was published in print media stating that twenty one farmers and farm labourers died and around 1000 others were infected between August to November,
+               2017 due to direct exposure of pesticides, 
+              this ignited his mind to initiate Multiplex Drone Pvt. Ltd.
         </p>
       </Modal.Body>
       <Modal.Footer>
@@ -180,7 +176,7 @@ function NMSCenteredModal(props) {
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
-      centered
+      style={{paddingTop:'10px',backgroundColor:"#282b32"}}
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -188,16 +184,12 @@ function NMSCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
         <p>
-          With the constant support she received from her husband and
-                        father-in-law, she envisioned completing the long-cherished
-                        vision of Dr. G.P. Shetty to provide chemical residue free
-                        food to the urbanites. Her personal vision is to create joy in
-                        growing & nurturing of vegetables, fruits and flowers in urban
-                        homes by providing organic and eco-friendly products, kits &
-                        services. She actively engages herself in the “Go Green, Grow
-                        Green” initiative.
+          Mrs. Nishchita M Shetty is an independent thinker and a graduate of science. 
+          With the constant support she received from her husband and father-in-law, she envisioned completing the long-cherished vision of Dr. G.P. Shetty; 
+          that is, to provide chemical residue free food to the urbanites. 
+          Her personal vision is to create joy in growing & nurturing of vegetables and fruits and flowers in urban homes by providing organic and eco-friendly products, 
+          kits & services. She actively engages herself in the “Go Green, Grow Green” initiative.
                         <br />
                         <br />
                         She is also a director in all the subsidiaries of Multiplex

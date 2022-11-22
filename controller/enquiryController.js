@@ -15,7 +15,7 @@ oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });*/
 exports.createEnquiry = async (req, res) => {
   const enquiry = req.body;
   const { email } = req.body;
-  console.log(enquiry);
+  //console.log(enquiry);
 
   try {
     //const existingUser = await Enquiry.findOne({ email });

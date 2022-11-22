@@ -10,13 +10,14 @@ import './style.css';
 import ResponsiveAppBar from './AppBar'; 
 import Footer from './Footer';
 import Services_Carousel from './Carousels/Services_Carousel';
+import Faqs from './Faqs/Faqs';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css'; // import first
 import { ToastContainer, toast } from 'react-toastify'; // then this
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-
+import Collapse from 'react-bootstrap/Collapse';
 
 
 function Services() {
@@ -25,6 +26,7 @@ function Services() {
   const handleClose = () => {setShow(false);setErr([])};
   const handleShow = () => setShow(true);
 
+  const [open, setOpen] = useState(false);  
       const navigate = useNavigate();
 
 const sendEnquiryDetails=async(e)=>{
@@ -50,8 +52,8 @@ const sendEnquiryDetails=async(e)=>{
                 })
                 .catch((error) => {
                   //console.log("err",error.response.data.replace("enquiries validation failed:", "").split(",",20));
-                  console.log(error.response)
-                  setErr(error.response.data.replace("enquiries validation failed:", "").split(",",20))
+                  //console.log(error.response)
+                  // setErr(error.response.data.replace("enquiries validation failed:", "").split(",",20))
                  })
                 .finally(()=>{
                   
@@ -70,7 +72,8 @@ const sendEnquiryDetails=async(e)=>{
         <section className="techspecs">
           <div className="container" style={{textAlign:"center"}}>
             <div className="overviewinfo" style={{textAlign:"",display:"flex",flexWrap:"wrap",alignItems:"center"}}>
-            <div style={{textAlign:"center",minWidth:"auto",margin:"auto"}}><p style={{color:"#fff",textAlign:"justify",}}>Finding a problem to find skilled Labour?
+            <div style={{textAlign:"center",minWidth:"auto",margin:"auto"}}><p style={{color:"#fff",textAlign:"justify",}}>
+                Finding a problem to find skilled Labour?
                 <br />
                 Difficult to manage the pest control?
                 <br />
@@ -78,37 +81,33 @@ const sendEnquiryDetails=async(e)=>{
               </p></div>
               
             </div>
-            <div className="overviewtitle" style={{textAlign:"center"}}>
+            <div className="overviewtitle" style={{textAlign:"",display:"flex",flexWrap:"wrap",alignItems:"center"}}>
+             <div style={{textAlign:"center",minWidth:"auto",margin:"auto"}}>
               <p style={{color:"#fff",textAlign:"justify"}}>Don't worry!
                 Multiplex Drone Pvt Ltd is eager to make farmers happy</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <div className="container" style={{width:"100%"}}>
-          <div className="servicestitle" style={{width:"100%"}}>
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>1. Fill out the form or call to +91-9591999044</p>
+        <div className="container" style={{width:"100%", textAlign: "center",display:"flex",flexWrap:"wrap",alignItems:"center"}}>
+          <div className="servicestitle" style={{textAlign:"center",minWidth:"auto",margin:"auto"}}>
+            <p className="" style={{color:"#fff",textAlign:"justify",}}>1. Fill out the form or call to +91-9591999044<br /><br />
+            2. Our experienced team will reach the location<br/><br />
+            3. Site Inspection and our team complete the work<br/><br />
+            4. Smiles on the farmer face
+            </p><br/><br />
+            <button className="quiry-btn" onClick={() => setShow(true)}>enquire now</button>            
           </div>
-          <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>2. Our experienced team will reach the location</p>
-          </div>
-          <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>3. Site Inspection and our team complete the work</p>
-          </div>
-          <div className="servicestitle">
-            <p className="" style={{color:"#1da912",textAlign:"justify",width:"100%"}}>4. Smiles on the farmer face</p>
-            <br /><br />
-          </div>
-            <button className="quiry-btn" onClick={() => setShow(true)}>enquire now</button>
+            
         </div>
-
+        
       </div>
 </section><br />
 
 <section className="s-we-offer" style={{margin:"0px",paddingTop:"0px",paddingBottom:"0px",marginBottom:"0px"}}>
       <div className="container">
         <h2>Services we offer</h2>
-        <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
         <div className="row we-offer-cover">
           <div className="col-12 col-sm-6 we-offer-item">
             <div className="offer-item-img">
@@ -116,8 +115,7 @@ const sendEnquiryDetails=async(e)=>{
             </div>
             <div className="offer-item-content" style={{textAlign:"justify"}}>
               <h4 className="title-line-left">spray</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a> ut aliquip ex ea
-                commodo consequat.</p>
+              By taking the spray service from the MDPL, farmers can save upto 30% of agricultural inputs, 90 to 95% of water and time. 
             </div>
           </div>
           <div className="col-12 col-sm-6 we-offer-item">
@@ -125,23 +123,43 @@ const sendEnquiryDetails=async(e)=>{
               <img src="img/img-serv-2.jpg" alt="img" />
             </div>
             <div className="offer-item-content" style={{textAlign:"justify"}}>
-              <h4 className="title-line-left">agricultural drones</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a> ut aliquip ex ea
-                commodo consequat.</p>
+              <h4 className="">crop-health-monitoring</h4>
+              By taking the service of crop health monitoring from the MDPL, farmers can make a practice of precision agriculture. We can generate crop health reports, and based on the data agricultural inputs can be sprayed precisely.
             </div>
           </div>
         </div>
       </div>
 </section>
 <br />
-<section className="new-product" style={{paddingTop:"0px",marginTop:"0px"}}>
-      <div className="container" style={{paddingTop:"0px",marginTop:"0px"}}>
-        <h2 style={{paddingTop:"0px",marginTop:"0px"}}>testimonials</h2>
-        <p className="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmmpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-        <Services_Carousel />
-      </div>
-    </section>
+ {
+//<section className="new-product" style={{paddingTop:"0px",marginTop:"0px"}}>
+//     <div className="container" style={{paddingTop:"0px",marginTop:"0px"}}>
+//       <h2 style={{paddingTop:"0px",marginTop:"0px"}}>testimonials</h2>
+//       <Services_Carousel />
+//     </div>
+//   </section>
+}
 
+
+<br /><section className="we-offer-item" >
+        
+
+      
+
+                    <div className="container">
+                        <h2 className="font-weight-normal text-7 mt-2 mb-2 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style={{animationDelay:"200ms"}}><strong className="font-weight-extra-bold">Frequently Asked Questions</strong></h2>
+                        <div className="row we-offer-cover">
+                          <div className="col-11 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                        <Faqs />
+                          </div>
+                        </div>
+                         
+                         
+                    </div>
+      
+
+
+        </section>
 
 
 
@@ -153,6 +171,7 @@ const sendEnquiryDetails=async(e)=>{
 
 <Modal
       show={show} onHide={handleClose}
+      style={{paddingTop:'5px'}}
     > 
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -167,7 +186,7 @@ const sendEnquiryDetails=async(e)=>{
             <label>Full Name</label>
             <input  type="text" name="yourname" placeholder="Name" style={{color:"black",padding:"5px"}} required/>         
             <lable>Contact Number</lable><br/>
-            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} required/>
+            <input type="tel" name="yourphone" placeholder="Phone"  style={{color:"black",padding:"5px"}} pattern="[0-9]{10}" required/>
             <lable>Email</lable><br/>
             <input  type="email" name="youremail" placeholder="Email" style={{color:"black",padding:"5px"}} required />
             <lable>Place</lable><br/>
@@ -175,9 +194,7 @@ const sendEnquiryDetails=async(e)=>{
               
             <lable>Description</lable>
             <textarea  name="yourtext" placeholder="Message" style={{color:"black",padding:"5px"}} required></textarea>
-{err.map((val)=>{ return(<div style={{color:"red",padding:"5px"}}>{val}</div>)
-                          
-                         })}
+
 
             <button className="btn"  style={{marginTop:"10px",background:"#1da912",color:"#fff"}}>SUBMIT</button>
         </form>
@@ -187,7 +204,16 @@ const sendEnquiryDetails=async(e)=>{
     </Modal>
       <ToastContainer />
 
+<a
+        href="https://wa.me/919591999044"
+        target="_blank"
+        rel="noopener noreferrer"
+                  style={{ position: "fixed", bottom: 90, right: 10, zIndex: 1000 }}
 
+      >
+                  <img className="whatsapp-icon" src="img/whatsapp.png" width="40px" />
+
+      </a>
 
 </div>
   );

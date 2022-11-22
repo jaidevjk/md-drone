@@ -139,68 +139,68 @@ const Services_Carousel = () => {
 }
 export default Services_Carousel;
 
-/*
- <Carousel
-    responsive={responsive}
-    ssr={true} // means to render carousel on server-side.
-    infinite={true}
-    autoPlay={true}
-    autoPlaySpeed={3000}
-    keyBoardControl={true}
-    transitionDuration={200}
-    containerClass="react-multi-carousel-list"
-    removeArrowOnDeviceType={["tablet", "mobile"]}
-    dotListClass="custom-dot-list-style"
-    itemClass={classes.carousel}
-    showDots = {false}
+// /*
+//  <Carousel
+//     responsive={responsive}
+//     ssr={true} // means to render carousel on server-side.
+//     infinite={true}
+//     autoPlay={true}
+//     autoPlaySpeed={3000}
+//     keyBoardControl={true}
+//     transitionDuration={200}
+//     containerClass="react-multi-carousel-list"
+//     removeArrowOnDeviceType={["tablet", "mobile"]}
+//     dotListClass="custom-dot-list-style"
+//     itemClass={classes.carousel}
+//     showDots = {false}
     
     
-    >
-        <div className="slider-new-product" style={{margin:"0px",height:"inherit"}}>
-          <div className="slide-new-product" style={{margin:"0px",height:"inherit"}}>
-            <div className="prod-item new" style={{margin:"0px",height:"100%"}}>
-              <div className="prod-thumbnail" style={{margin:"0px",height:"100%"}}>
-                <div className="prod-img" style={{margin:"0px",height:"100%"}}>
-                  <img src="img/prod-1.jpg" alt="img" height="inherit" style={{margin:"0px",height:"100%"}}/>
-                  <ul className="prod-link-cover">
-                    <li><a href="#"><i className="fa fa-play" aria-hidden="true"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        </div>
+//     >
+//         <div className="slider-new-product" style={{margin:"0px",height:"inherit"}}>
+//           <div className="slide-new-product" style={{margin:"0px",height:"inherit"}}>
+//             <div className="prod-item new" style={{margin:"0px",height:"100%"}}>
+//               <div className="prod-thumbnail" style={{margin:"0px",height:"100%"}}>
+//                 <div className="prod-img" style={{margin:"0px",height:"100%"}}>
+//                   <img src="img/prod-1.jpg" alt="img" height="inherit" style={{margin:"0px",height:"100%"}}/>
+//                   <ul className="prod-link-cover">
+//                     <li><a href="#"><i className="fa fa-play" aria-hidden="true"></i></a></li>
+//                   </ul>
+//                 </div>
+//               </div>
+//             </div>
+//         </div>
         
-        </div>
+//         </div>
 
-        <div className="slider-new-product" style={{margin:"0px",height:"inherit"}}>
-          <div className="slide-new-product" style={{margin:"0px",height:"inherit"}}>
-            <div className="prod-item new" style={{margin:"0px",height:"100%"}}>
-              <div className="prod-thumbnail" style={{margin:"0px",height:"100%"}}>
-                <div className="prod-img" style={{margin:"0px",height:"100%"}}>
-                  <img src="img/prod-1.jpg" alt="img" height="inherit" style={{margin:"0px",height:"100%"}}/>
-                  <ul className="prod-link-cover">
-                    <li><a href="#"><i className="fa fa-play" aria-hidden="true"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        </div>
+//         <div className="slider-new-product" style={{margin:"0px",height:"inherit"}}>
+//           <div className="slide-new-product" style={{margin:"0px",height:"inherit"}}>
+//             <div className="prod-item new" style={{margin:"0px",height:"100%"}}>
+//               <div className="prod-thumbnail" style={{margin:"0px",height:"100%"}}>
+//                 <div className="prod-img" style={{margin:"0px",height:"100%"}}>
+//                   <img src="img/prod-1.jpg" alt="img" height="inherit" style={{margin:"0px",height:"100%"}}/>
+//                   <ul className="prod-link-cover">
+//                     <li><a href="#"><i className="fa fa-play" aria-hidden="true"></i></a></li>
+//                   </ul>
+//                 </div>
+//               </div>
+//             </div>
+//         </div>
         
-        </div>
-        <div className="slider-new-product" style={{margin:"0px",height:"inherit"}}>
-          <div className="slide-new-product" style={{margin:"0px",height:"inherit"}}>
-            <div className="prod-item new" style={{margin:"0px",height:"100%"}}>
-              <div className="prod-thumbnail" style={{margin:"0px",height:"100%"}}>
-                <div className="prod-img" style={{margin:"0px",height:"100%"}}>
-                  <img src="img/prod-1.jpg" alt="img" height="inherit" style={{margin:"0px",height:"100%"}}/>
-                  <ul className="prod-link-cover">
-                    <li><a href="#"><i className="fa fa-play" aria-hidden="true"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        </div>
+//         </div>
+//         <div className="slider-new-product" style={{margin:"0px",height:"inherit"}}>
+//           <div className="slide-new-product" style={{margin:"0px",height:"inherit"}}>
+//             <div className="prod-item new" style={{margin:"0px",height:"100%"}}>
+//               <div className="prod-thumbnail" style={{margin:"0px",height:"100%"}}>
+//                 <div className="prod-img" style={{margin:"0px",height:"100%"}}>
+//                   <img src="img/prod-1.jpg" alt="img" height="inherit" style={{margin:"0px",height:"100%"}}/>
+//                   <ul className="prod-link-cover">
+//                     <li><a href="#"><i className="fa fa-play" aria-hidden="true"></i></a></li>
+//                   </ul>
+//                 </div>
+//               </div>
+//             </div>
+//         </div>
         
-        </div>
-        </Carousel>
-*/
+//         </div>
+//         </Carousel>
+// */

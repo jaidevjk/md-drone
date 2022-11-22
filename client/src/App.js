@@ -1,5 +1,6 @@
 import React,{useState,useCallback} from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import RouterApp from './Routes';
 import Home from "./Home";
 function App() {
@@ -9,9 +10,12 @@ function App() {
   return (
     <div className="App">
     <RouterApp />
-    </div>
+     
+      </div>
    
   );
 }
 
 export default App;
+
+        //            <img className="lazy" src="img/img-2.jpg" alt="img" />
