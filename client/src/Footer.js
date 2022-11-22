@@ -81,7 +81,7 @@ function Footer() {
           <h6>info</h6>
             <li><a href="/training">Training</a></li>
             <li><a href="#">Gallery</a></li>
-            <li><a href="/newsandevents">News & Events</a></li>
+            <li><a href="/newsandevent">News & Events</a></li>
             <li><a href="#">Careers</a></li>
           </ul>
         

@@ -155,7 +155,7 @@ const Images_Carousel = () => {
     const verify = async()=>{
 
      await axios
-      .get("http://localhost:4003/newsandevents")
+      .get("/newsandevents")
       .then((response) => {
         //console.log(response)
         let data = response.data;
@@ -295,7 +295,7 @@ const Videos_Carousel = () => {
     const verify = async()=>{
 
      await axios
-      .get("http://localhost:4003/iframelinks")
+      .get("/iframelinks")
       .then((response) => {
         //console.log(response)
         let data = response.data;

@@ -46,11 +46,11 @@ export default function RouterApp() {
         <Route  path="/bheem" element={<Bheem />} />
         <Route  path="/chotabheem" element={<ChotaBheem />} />
         <Route  path="/ikshana" element={<Ikshana />} />
-        <Route  path="/newsandevents" element={<NewsAndEvents />} />
+        <Route  path="/newsandevent" element={<NewsAndEvents />} />
         <Route  path="/gallery" element={<Gallery />} />
-        <Route path="/trainingregistration" element={<TrainingRegistration />} />
+        <Route path="/trainingregistering" element={<TrainingRegistration />} />
 
-        <Route  path="/login" element={<AdminLogin />} />
+        <Route  path="/adminlogin" element={<AdminLogin />} />
         <Route  path="/adminhome" element={<AdminHome />} />
         <Route  path="/registeredusers" element={<RegisteredUsers />} />
         <Route  path="/addtestimonials" element={<AddTestimonials />} />

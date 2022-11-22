@@ -650,7 +650,7 @@ const [err,setErr] =useState([]);
 <h4>Certificate</h4>
             <p className="text-dark lead text-justify">At the end of the Training Course, a certificate will be presented to the participants who have attended all the sessions of the Training Course. The certificate will be titled, <b>"Diploma in Drone Technology for completing 'MULTIROTOR DRONE/UAV PILOT COURSE"</b></p>
                     <div style={{textAlign:"center"}}>
-                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"  style={{background:"green"}} onClick={()=>{navigate("/trainingregistration")}}>Enroll Now</button>
+                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"  style={{background:"green"}} onClick={()=>{navigate("/trainingregistering")}}>Enroll Now</button>
 
                     </div>
                     </div>
