@@ -12,6 +12,7 @@ import {useState,useEffect} from 'react';
 import axios from "axios";
  import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
+import API from '../../Api';
 
 const useStyles = makeStyles(theme => ({
     
@@ -80,7 +81,7 @@ const responsive = {
 
 const TestimonialCarousel = () => {
 
-    
+   
     const classes = useStyles();
     const [userData,setData] = useState([]);
 
@@ -94,7 +95,7 @@ const TestimonialCarousel = () => {
     const verify = async()=>{
 
      await axios
-      .get("/testimonials")
+      .get(API+`/testimonials`)
       .then((response) => {
         console.log(response)
         let data = response.data;

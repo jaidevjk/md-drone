@@ -14,7 +14,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import AdminAppbar from './AdminAppbar' ;
 import CircularStatic from './CircularLoaders';
 import Modal from 'react-bootstrap/Modal';
-
+import API from '../Api';
 
 export default function AddTestimonials(props) {
 
@@ -39,7 +39,7 @@ verify();
 
 const deleteTestimonial= async(id)=>{
 const Id = id;
-   axios.delete(`http://localhost:4003/testimonials/${Id}`)
+   axios.delete(API+`/testimonials/${Id}`)
                 .then((response) => {
                   console.log(response.data);
                  
@@ -59,7 +59,7 @@ const Id = id;
 const verify = async()=>{
 
      await axios
-      .get("http://localhost:4003/testimonials")
+      .get(API+"/testimonials")
       .then((response) => {
         console.log(response)
         let data = response.data;
@@ -145,7 +145,7 @@ const encodeImageFileAsURL=(e)=> {
             img:item,
                      }
 console.log(objectOb)
-              await axios.post('http://localhost:4003/testimonials', objectOb)
+              await axios.post(API+'/testimonials', objectOb)
                 .then((response) => {
                   console.log(response.data);
                   // navigate(`/`);

@@ -9,6 +9,7 @@ import AdminAppbar from './AdminAppbar' ;
 import CircularStatic from './CircularLoaders';
 import Grid from '@mui/material/Grid';
 //import { DownloadTableExcel } from 'react-export-table-to-excel';
+import API from '../Api';
 
 function RegisteredUsers() {
   const tableRef = useRef(null);
@@ -36,7 +37,7 @@ verify();
 const verify = async()=>{
 
      await axios
-      .get("http://localhost:4003/trainingregistration")
+      .get(API+"/trainingregistration")
       .then((response) => {
         
         let data = response.data;

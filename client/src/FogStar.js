@@ -15,6 +15,7 @@ import { ToastContainer, toast } from 'react-toastify'; // then this
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import API from './Api';
 
 function FogStar() {
 const [err,setErr] =useState([]);
@@ -35,7 +36,7 @@ const sendEnquiryDetails=async(e)=>{
           }
           // console.log(objectOb);
           await axios
-                .post('http://localhost:4003/contactusenquiry', objectOb)
+                .post(API+'/contactusenquiry', objectOb)
                 .then((response) => {
                   //navigate(`/`);
                   toast.success("Successfully Enquiry Submitted.",{position: "top-center",});

@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
  import axios from "axios";
  import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
+import API from '../Api';
 
 export default function AdminLoginCard(props) {
 
@@ -25,7 +26,7 @@ const navigate = useNavigate();
      let Password = password;
 
      axios
-      .post("http://localhost:4003/admin/login", {
+      .post(API+"/admin/login", {
         email: Email,
         password: Password
       })

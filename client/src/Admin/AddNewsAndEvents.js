@@ -14,7 +14,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import AdminAppbar from './AdminAppbar' ;
 import CircularStatic from './CircularLoaders';
 import Modal from 'react-bootstrap/Modal';
-
+import API from '../Api';
 
 export default function AddNewsAndEvents(props) {
 
@@ -43,7 +43,7 @@ getEvents();
 
 const deleteEvent= async(id)=>{
 const Id = id;
-   axios.delete(`http://localhost:4003/newsandevents/${Id}`)
+   axios.delete(API+`/newsandevents/${Id}`)
                 .then((response) => {
                   //console.log(response.data);
                  
@@ -63,7 +63,7 @@ const Id = id;
 const getEvents = async()=>{
 
      await axios
-      .get("http://localhost:4003/newsandevents")
+      .get(API+"/newsandevents")
       .then((response) => {
         //console.log(response)
         let data = response.data;
@@ -151,7 +151,7 @@ const encodeImageFileAsURL=(e)=> {
             img:item,
                      }
 //console.log(objectOb)
-              await axios.post('http://localhost:4003/newsandevents', objectOb)
+              await axios.post(API+'/newsandevents', objectOb)
                 .then((response) => {
                   //console.log(response.data);
                   // navigate(`/`);

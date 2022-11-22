@@ -20,6 +20,7 @@ import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import API from './Api';
 
   const style = {
 };
@@ -89,7 +90,7 @@ const [spraysererr,setSprayserErr] =useState([]);
           }
           console.log(objectOb);
           await axios
-                .post('http://localhost:4003/enquiry', objectOb)
+                .post(API+'/enquiry', objectOb)
                 .then((response) => {
                   navigate(`/`);
                   toast.success("Successfully Enquiry Submitted.",{position: "top-center",});

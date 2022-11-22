@@ -14,6 +14,7 @@ import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css'; // import first
 import { ToastContainer, toast } from 'react-toastify'; // then this
 import { useNavigate } from 'react-router-dom';
+import API from './Api';
 
 
 function TrainingRegistration() {
@@ -58,7 +59,7 @@ setfile([item])
   console.log(objectOb);
   // alert("got it");
   await axios
-                .post('http://localhost:4003/trainingregistration', objectOb)
+                .post(API+'/trainingregistration', objectOb)
                 .then((response) => {
                   
                   toast.success("Successfully Enquiry Submitted.",{position: "top-center",});

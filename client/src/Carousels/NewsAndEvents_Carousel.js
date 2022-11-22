@@ -8,6 +8,7 @@ import { ClassNames } from '@emotion/react';
 import axios from "axios";
  import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
+import API from '../Api';
 
 const useStyles = makeStyles(theme => ({
    
@@ -155,7 +156,7 @@ const Images_Carousel = () => {
     const verify = async()=>{
 
      await axios
-      .get("/newsandevents")
+      .get(API+"/newsandevents")
       .then((response) => {
         //console.log(response)
         let data = response.data;
@@ -345,7 +346,7 @@ const Videos_Carousel = () => {
     const verify = async()=>{
 
      await axios
-      .get("/iframelinks")
+      .get(API+"/iframelinks")
       .then((response) => {
         //console.log(response)
         let data = response.data;

@@ -15,6 +15,7 @@ import { ToastContainer, toast } from 'react-toastify'; // then this
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import API from './Api';
 
 function MD16p() {
 const [err,setErr] =useState([]);
@@ -35,7 +36,7 @@ const sendEnquiryDetails=async(e)=>{
           }
           // console.log(objectOb);
           await axios
-                .post('http://localhost:4003/contactusenquiry', objectOb)
+                .post(API+'/contactusenquiry', objectOb)
                 .then((response) => {
                   //navigate(`/`);
                   //alert("Successfully")
@@ -76,7 +77,7 @@ const downloadCatlog=async(e)=>{
           }
            //console.log(objectOb);
           await axios
-                .post('http://localhost:4003/catlogdownload', objectOb,{
+                .post(API+'/catlogdownload', objectOb,{
     
     responseType: "blob",
     

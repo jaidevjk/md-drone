@@ -14,7 +14,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import AdminAppbar from './AdminAppbar' ;
 import CircularStatic from './CircularLoaders';
 import Modal from 'react-bootstrap/Modal';
-
+import API from '../Api';
 
 export default function AddYoutubeLinks(props) {
 
@@ -40,7 +40,7 @@ useEffect(()=>{
 
 const deleteLink= async(id)=>{
 const Id = id;
-   axios.delete(`http://localhost:4003/iframelinks/${Id}`)
+   axios.delete(API+`/iframelinks/${Id}`)
                 .then((response) => {
                   //console.log(response.data);
                  
@@ -61,7 +61,7 @@ const Id = id;
   const getYoutubeLinks = async()=>{
 
      await axios
-      .get("http://localhost:4003/iframelinks")
+      .get(API+"/iframelinks")
       .then((response) => {
         //console.log(response)
         let data = response.data;
@@ -128,7 +128,7 @@ const addYouTubeLinks = async(e)=>{
             
                      }
 console.log(objectOb)
-              await axios.post('http://localhost:4003/iframelinks', objectOb)
+              await axios.post(API+'/iframelinks', objectOb)
                 .then((response) => {
                   console.log(response.data);
                   // navigate(`/`);
@@ -184,22 +184,14 @@ console.log(objectOb)
     <ToastContainer />
 
 
-         
-
-</div>
-    </section>
-
-
-
  <table  style={{border:"solid green 2px"}}>
                 <thead style={{}}>
                   <tr style={{}}>
                     <th className="slno">Sl. No</th>
                     
-                    <th scope="col" className="th">Event Date</th>
-                    <th scope="col" className="th">Description</th>                     
-                     <th scope="col" className="th">Date</th>
-                    <th scope="col" className="th">Time</th>
+                    <th scope="col" className="th">Link</th>
+                                         
+                     
                     <th scope="col" className="th">Delete Events </th>
 
                   </tr>
@@ -208,6 +200,13 @@ console.log(objectOb)
       {youtubelinkData}
     </tbody>
               </table>
+         
+
+</div>
+    </section>
+
+
+
 
 
 
