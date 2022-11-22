@@ -94,7 +94,7 @@ const TestimonialCarousel = () => {
     const verify = async()=>{
 
      await axios
-      .get("http://localhost:4003/testimonials")
+      .get("/testimonials")
       .then((response) => {
         console.log(response)
         let data = response.data;
