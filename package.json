@@ -249,7 +249,7 @@
 
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon ./app.js",
+    "server": "nodemon ./bin/www",
      "client": "npm run start --prefix client",
      "start": "node ./app.js",
      "dev": "concurrently \"npm run client\" \"npm run server\"",
